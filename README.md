@@ -5,3 +5,4 @@ https://www.tailwindshades.com
 https://github.com/francoischalifour/medium-zoom
 https://particles.js.org
 https://swiperjs.com
+https://www.npmjs.com/package/gh-pages
