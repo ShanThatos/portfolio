@@ -1,0 +1,32 @@
+{
+  "brainfuck": {
+    "name": "Brainf**k",
+    "icon": "brainfuck.svg",
+    "url": "https://esolangs.org/wiki/Brainfuck"
+  },
+  "flask": {
+    "name": "Flask",
+    "icon": "flask.png",
+    "url": "https://flask.palletsprojects.com/"
+  },
+  "htmx": {
+    "name": "htmx",
+    "icon": "htmx.png",
+    "url": "https://htmx.org/"
+  },
+  "poetry": {
+    "name": "Poetry",
+    "icon": "poetry.svg",
+    "url": "https://python-poetry.org/"
+  },
+  "tailwind": {
+    "name": "Tailwind CSS",
+    "icon": "tailwindcss.svg",
+    "url": "https://tailwindcss.com/"
+  },
+  "python": {
+    "name": "Python",
+    "icon": "python.svg",
+    "url": "https://www.python.org/"
+  }
+}

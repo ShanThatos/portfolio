@@ -1,0 +1,43 @@
+diff --git a/node_modules/typewriter-effect/index.d.ts b/node_modules/typewriter-effect/index.d.ts
+index 3541220..f089304 100644
+--- a/node_modules/typewriter-effect/index.d.ts
++++ b/node_modules/typewriter-effect/index.d.ts
+@@ -26,6 +26,12 @@ declare module "typewriter-effect" {
+      * @default "natural"
+      */
+     deleteSpeed?: Speed
++    /**
++     * The delay between each string when using strings option.
++     *
++     * @default 1500
++     */
++    pauseFor?: number
+     /**
+      * Whether to keep looping or not.
+      *
+@@ -84,7 +90,7 @@ declare module "typewriter-effect" {
+      *
+      * @default null
+      */
+-    onRemoveNode?: (param: { node: Node | void, charater: string }) => void
++    onRemoveNode?: (param: { node: Node | void; charater: string }) => void
+   }
+ 
+   export interface TypewriterState {
+@@ -95,7 +101,6 @@ declare module "typewriter-effect" {
+     }
+   }
+ 
+-
+   export class TypewriterClass {
+     constructor(container: string | HTMLElement, options: Options)
+ 
+@@ -161,7 +166,7 @@ declare module "typewriter-effect" {
+      */
+     callFunction(
+       callback: (state: TypewriterState) => void,
+-      thisArg?: Record<string, any>,
++      thisArg?: Record<string, any>
+     ): TypewriterClass
+ 
+     /**
