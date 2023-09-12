@@ -1,10 +1,19 @@
 [
   {
+    "id": "portfolio",
+    "name": "Portfolio (This Website)",
+    "subtext": "My personal website portfolio! Feel free to check out the repo and use it as a template for your own portfolio. The project is setup for easy deployment to GitHub Pages.",
+    "tech": ["javascript", "typescript", "react", "tailwind", "vite"],
+    "start": "2023-09-08",
+    "repo": "https://github.com/ShanThatos/portfolio",
+    "repo_name": "portfolio"
+  },
+  {
     "id": "slap",
     "name": "SLAP - Slim Application Platform",
     "subtext": "An Application Hosting Platform to remotely host & control personal projects on my Raspberry PI.",
-    "tech": ["python", "flask", "poetry", "htmx", "tailwind"],
-    "images": ["slap.png"],
+    "tech": ["python", "flask", "poetry", "html", "htmx", "css", "tailwind"],
+    "media": ["slap.png"],
     "start": "2023-07-10",
     "end": "2023-09-09",
     "repo": "https://github.com/ShanThatos/beepi-process-controller",
@@ -15,11 +24,55 @@
     "name": "Compile High Level to BF",
     "subtext": "An exploration of the Turing Completeness of brainf**k. I built a compiler that transforms a custom made high level language to BF. The language itself reads like a mix of C and Python. Internally, the language is first compiled down to a custom assembly language, and then compiled to BF.",
     "tech": ["python", "brainfuck"],
-    "images": ["fib.png", "spec.png"],
+    "media": ["fib.png", "spec.png"],
     "start": "2023-04-01",
     "end": "2023-08-19",
     "repo": "https://github.com/ShanThatos/compile-to-bf",
     "repo_name": "compile-to-bf"
+  },
+  {
+    "id": "interim",
+    "name": "Interim - Unity Game",
+    "subtext": "Capstone project turned to ambitious 2D story-driven platformer. Four months of consistent work, revisions, and zero regrets led to this amazing work of art and a challenging platformer. One of the coolest parts about this project is the enemy AI/behavior system that I built. Play through the game and you'll see how dynamic the boss battles can get! <div style='margin-top: 10px;'>Game Overview: Rem is a private investigator who traverses Nightmare Realms with his partner, Elio. When faced with the strangest mystery of his career, will he turn and fight, or lose himself to the void?</div>",
+    "tech": ["unity", "csharp"],
+    "media": [
+      "interim.png",
+      "video:https://www.youtube.com/embed/8we3EDxP0gE?enablejsapi=1",
+      "houseprison.png",
+      "cavern.png"
+    ],
+    "repo": "https://github.com/ShanThatos/dream6-nightmares",
+    "repo_name": "dream6-nightmares"
+  },
+  {
+    "id": "moviegame",
+    "name": "Six Degrees of Kevin Bacon",
+    "hidden": true
+  },
+  {
+    "id": "xrdemo",
+    "name": "WebXR Hand Tracking Demo",
+    "hidden": true
+  },
+  {
+    "id": "ineedahero",
+    "name": "I Need A Hero - Godot Game",
+    "hidden": true
+  },
+  {
+    "id": "txmc",
+    "name": "TXMC - TexasMathContests Web Application",
+    "hidden": true
+  },
+  {
+    "id": "testgen",
+    "name": "TXMC - Math/Science Test Generator",
+    "hidden": true
+  },
+  {
+    "id": "spritegen",
+    "name": "Spritesheet Generator",
+    "hidden": true
   },
   {
     "id": "pymacros",
@@ -36,7 +89,7 @@
     "name": "",
     "subtext": "",
     "tech": [],
-    "images": [],
+    "media": [],
     "start": "",
     "end": "",
     "repo": "",

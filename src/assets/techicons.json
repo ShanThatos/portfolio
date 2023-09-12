@@ -4,29 +4,69 @@
     "icon": "brainfuck.svg",
     "url": "https://esolangs.org/wiki/Brainfuck"
   },
+  "csharp": {
+    "name": "C Sharp",
+    "icon": "csharp.svg",
+    "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"
+  },
+  "css": {
+    "name": "CSS",
+    "icon": "css.svg",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+  },
   "flask": {
     "name": "Flask",
     "icon": "flask.png",
     "url": "https://flask.palletsprojects.com/"
+  },
+  "html": {
+    "name": "HTML",
+    "icon": "html.svg",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
   },
   "htmx": {
     "name": "htmx",
     "icon": "htmx.png",
     "url": "https://htmx.org/"
   },
+  "javascript": {
+    "name": "JavaScript",
+    "icon": "javascript.svg",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
   "poetry": {
     "name": "Poetry",
     "icon": "poetry.svg",
     "url": "https://python-poetry.org/"
+  },
+  "python": {
+    "name": "Python",
+    "icon": "python.svg",
+    "url": "https://www.python.org/"
+  },
+  "react": {
+    "name": "React",
+    "icon": "react_ts.svg",
+    "url": "https://react.dev"
   },
   "tailwind": {
     "name": "Tailwind CSS",
     "icon": "tailwindcss.svg",
     "url": "https://tailwindcss.com/"
   },
-  "python": {
-    "name": "Python",
-    "icon": "python.svg",
-    "url": "https://www.python.org/"
+  "typescript": {
+    "name": "TypeScript",
+    "icon": "typescript.svg",
+    "url": "https://www.typescriptlang.org"
+  },
+  "unity": {
+    "name": "Unity",
+    "icon": "unity.png",
+    "url": "https://unity.com"
+  },
+  "vite": {
+    "name": "Vite",
+    "icon": "vite.svg",
+    "url": "https://vitejs.dev/"
   }
 }

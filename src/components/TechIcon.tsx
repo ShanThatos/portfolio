@@ -13,7 +13,7 @@ function TechIcon({ name }: { name: string }) {
         rel="noreferrer"
       >
         <div
-          className="bg-[#252525] p-1.5 rounded-md 
+          className="bg-[#252525] p-1.5 pr-2 rounded-md 
           border-2 border-white
           flex flex-row justify-center items-center gap-1
           text-permawhite"
