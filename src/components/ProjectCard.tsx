@@ -27,6 +27,8 @@ function ProjectCard({ project }: { project: string }) {
   const data = useMemo(() => PROJECTS.find((p) => p.id === project), [project])
 
   if (!data) throw new Error(`Project ${project} not found`)
+  if (data?.hidden)
+    return <></>
 
   const toDateDisplay = (date: string) => {
     if (date === "present") return "Present"

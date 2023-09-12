@@ -20,5 +20,27 @@
     "end": "2023-08-19",
     "repo": "https://github.com/ShanThatos/compile-to-bf",
     "repo_name": "compile-to-bf"
+  },
+  {
+    "id": "pymacros",
+    "name": "PyMacros",
+    "hidden": true
+  },
+  {
+    "id": "talis",
+    "name": "TALIS - Terminal Alias",
+    "hidden": true
+  },
+  {
+    "id": "",
+    "name": "",
+    "subtext": "",
+    "tech": [],
+    "images": [],
+    "start": "",
+    "end": "",
+    "repo": "",
+    "repo_name": "",
+    "hidden": true
   }
 ]

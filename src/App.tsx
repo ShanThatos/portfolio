@@ -1,8 +1,15 @@
+import { useEffect } from "react"
 import PROJECTS from "./assets/projects.json"
 import MainBanner from "./components/MainBanner"
 import ProjectCard from "./components/ProjectCard"
 
+import nightwind from "nightwind/helper"
+
 function App() {
+  useEffect(() => {
+    nightwind.enable(true)
+  }, [])
+
   return (
     <>
       <MainBanner />
