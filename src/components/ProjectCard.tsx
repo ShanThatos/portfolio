@@ -125,7 +125,7 @@ function ProjectCard({ project }: { project: string }) {
         </div>
       )}
       {data.links && (
-        <div className="flex flex-row justify-start items-center gap-5 px-7">
+        <div className="flex flex-row flex-wrap justify-center items-center gap-5 px-7">
           {data.links.map((link, index) => (
             <ExternalLinkButton
               key={`link-${link.url}-${index}`}
