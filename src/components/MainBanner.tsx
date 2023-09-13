@@ -58,7 +58,7 @@ function MainBanner() {
               className="
                 w-[8rem]
                 border-2 border-[#286ab6] 
-                text-[#286ab6] 
+                text-[#88c0ff]
                 p-2.5 rounded-lg 
                 hover:underline hover:opacity-80
                 hover:shadow-md hover:shadow-[#286ab6] transition-shadow 
@@ -69,14 +69,14 @@ function MainBanner() {
             >
               <div className="flex flex-row justify-center items-center">
                 <img src="/icons/linkedin.png" className="w-8 h-8" />
-                <span className="ml-2 text-[#88c0ff]">LinkedIn</span>
+                <span className="ml-2">LinkedIn</span>
               </div>
             </a>
             <a
               className="
                 w-[8rem]
                 border-2 border-[#3c9c59] 
-                text-[#3c9c59] 
+                text-[#5ad47f]
                 p-2.5 rounded-lg 
                 hover:underline hover:opacity-80
                 hover:shadow-md hover:shadow-[#3c9c59] transition-shadow 
@@ -87,14 +87,14 @@ function MainBanner() {
             >
               <div className="flex flex-row justify-center items-center">
                 <img src="/icons/document.png" className="w-8 h-8" />
-                <span className="ml-2 text-[#5ad47f]">Resume</span>
+                <span className="ml-2">Resume</span>
               </div>
             </a>
             <a
               className="
                 w-[8rem]
                 border-2 border-[#286ab6] 
-                text-[#286ab6] 
+                text-[#88c0ff]
                 p-2.5 rounded-lg 
                 hover:underline hover:opacity-80
                 hover:shadow-md hover:shadow-[#286ab6] transition-shadow 
@@ -105,7 +105,7 @@ function MainBanner() {
             >
               <div className="flex flex-row justify-center items-center">
                 <img src="/icons/github.svg" className="w-8 h-8" />
-                <span className="ml-2 text-[#88c0ff]">GitHub</span>
+                <span className="ml-2">GitHub</span>
               </div>
             </a>
             <a
@@ -123,7 +123,7 @@ function MainBanner() {
             >
               <div className="flex flex-row justify-center items-center">
                 <img src="/icons/youtube.png" className="w-8 h-8" />
-                <span className="ml-2 text-[#ff6464]">YouTube</span>
+                <span className="ml-2">YouTube</span>
               </div>
             </a>
           </div>

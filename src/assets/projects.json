@@ -5,8 +5,13 @@
     "subtext": "My personal website portfolio! Feel free to check out the repo and use it as a template for your own portfolio. The project is setup for easy deployment to GitHub Pages.",
     "tech": ["javascript", "typescript", "react", "tailwind", "vite"],
     "start": "2023-09-08",
-    "repo": "https://github.com/ShanThatos/portfolio",
-    "repo_name": "portfolio"
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/portfolio",
+        "text": "portfolio"
+      }
+    ]
   },
   {
     "id": "slap",
@@ -16,8 +21,13 @@
     "media": ["slap.png"],
     "start": "2023-07-10",
     "end": "2023-09-09",
-    "repo": "https://github.com/ShanThatos/beepi-process-controller",
-    "repo_name": "beepi-process-controller"
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/beepi-process-controller",
+        "text": "beepi-process-controller"
+      }
+    ]
   },
   {
     "id": "c2bf",
@@ -27,8 +37,13 @@
     "media": ["fib.png", "spec.png"],
     "start": "2023-04-01",
     "end": "2023-08-19",
-    "repo": "https://github.com/ShanThatos/compile-to-bf",
-    "repo_name": "compile-to-bf"
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/compile-to-bf",
+        "text": "compile-to-bf"
+      }
+    ]
   },
   {
     "id": "interim",
@@ -41,8 +56,28 @@
       "houseprison.png",
       "cavern.png"
     ],
-    "repo": "https://github.com/ShanThatos/dream6-nightmares",
-    "repo_name": "dream6-nightmares"
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/dream6-nightmares",
+        "text": "dream6-nightmares"
+      },
+      {
+        "type": "itchio",
+        "url": "https://jiaxinhuang.itch.io/interim",
+        "text": "itch.io page"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/watch?v=8we3EDxP0gE",
+        "text": "Game Trailer"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/playlist?list=PLBpN2wEoKkxkFergviLp2kCFm5mdMCPhk",
+        "text": "Gameplay"
+      }
+    ]
   },
   {
     "id": "moviegame",

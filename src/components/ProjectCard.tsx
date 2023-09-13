@@ -9,6 +9,7 @@ import PROJECTS from "../assets/projects.json"
 import { ImageZoom } from "./ImageZoom"
 import TechIcon from "./TechIcon"
 import Swiper from "swiper"
+import ExternalLinkButton from "./ExternalLinkButton"
 
 const MONTHS = [
   "Jan",
@@ -123,21 +124,16 @@ function ProjectCard({ project }: { project: string }) {
           </SwiperComponent>
         </div>
       )}
-      {data.repo && (
-        <div className="flex flex-row justify-start items-center px-7">
-          <a
-            className="border border-[#286ab6] p-2 rounded hover:underline hover:shadow-md hover:shadow-[#286ab6] hover:opacity-80 transition-shadow"
-            href={data.repo}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="flex flex-row items-center">
-              <img src="/icons/github.svg" className="w-8 h-8" />
-              <span className="ml-2 text-[#88c0ff]">
-                {data.repo_name ?? "GitHub Repo"}
-              </span>
-            </div>
-          </a>
+      {data.links && (
+        <div className="flex flex-row justify-start items-center gap-5 px-7">
+          {data.links.map((link, index) => (
+            <ExternalLinkButton
+              key={`link-${link.url}-${index}`}
+              type={link.type}
+              href={link.url}
+              text={link.text}
+            />
+          ))}
         </div>
       )}
     </div>
