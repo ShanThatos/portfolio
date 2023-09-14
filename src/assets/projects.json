@@ -56,6 +56,8 @@
       "houseprison.png",
       "cavern.png"
     ],
+    "start": "2022-08-15",
+    "end": "2022-12-08",
     "links": [
       {
         "type": "github",
@@ -118,6 +120,15 @@
     "id": "talis",
     "name": "TALIS - Terminal Alias",
     "hidden": true
+  },
+  {
+    "id": "osgraphics",
+    "name": "Custom OS Desktop Environment",
+    "subtext": "Worked with a team of 40 classmates to improve our class wide operating system and have it run DOOM 1994. I was responsible for the graphics and windowing system. I created a basic implementation of X11 for DOOM - including mouse/keyboard event queueing and framebuffer manipulation. In about 20 hours of work I also individually developed a desktop environment for the OS, with support for colors, shapes, text, images, and a mouse/keyboard controlled cursor. It wasn't easy though. If you've ever looked into the structure of font & image files you would know that's an impossible task for a single person. So I came up with a workaround - I used Java to read the data for fonts/images and converted them to a custom file format that I could process in C for the desktop environment. It was a massive success and I'm very proud of the work I did. Check out the demo video below!",
+    "tech": ["cpp", "c", "java"],
+    "media": ["video:https://www.youtube.com/embed/muhu8e207u4?enablejsapi=1"],
+    "start": "2021-11-02",
+    "end": "2021-12-02"
   },
   {
     "id": "",
