@@ -99,7 +99,39 @@
   {
     "id": "txmc",
     "name": "TXMC - TexasMathContests Web Application",
-    "hidden": true
+    "subtext": "TXMC is a large-scale web application designed for organizing and hosting competitive Math & Science tournaments around Texas. This project was born from a Web Programming course I took at Harvard Summer 2018 and it turned into an incredible project that I worked on for the next 4 years. These tournaments were intended for K-12 students and I had participated in them frequently while growing up. One issue they all faced was that they all used different systems for organizing tournaments. I built TXMC to provide a single unified system to organize all parts of these Math & Science Tournaments. It handles registrations, payments, notifications, & real-time results and it was successfully used for hosting 4 in-person tournaments before COVID hit. During Summer 2020, I decided to redesign my web application to work for virtual tournaments. As a part of that endeavor, I also created a Math Test Generator to rapidly produce tests for these virtual tournaments. Over the next 2 years, I hosted over 60 weekly virtual tournaments, engaged over 2000+ students from Texas, and I used the proceeds to pay for my college tuition. The project has since been retired due to spam but the code is public!",
+    "tech": [
+      "python",
+      "flask",
+      "sqlalchemy",
+      "postgresql",
+      "html",
+      "css",
+      "javascript",
+      "jquery",
+      "stripe",
+      "sheetsapi",
+      "mathjax"
+    ],
+    "start": "2018-06-02",
+    "end": "2022-07-29",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/tourney-app-deux",
+        "text": "tourney-app-deux"
+      },
+      {
+        "type": "youtube",
+        "url": "https://youtu.be/m6q4NDJckmk?si=O5F6DHbhxllEL2HY",
+        "text": "Old Demo"
+      },
+      {
+        "type": "misc",
+        "url": "http://web.archive.org/web/20220123055616/https://www.texasmathcontests.com/",
+        "text": "Web Archive"
+      }
+    ]
   },
   {
     "id": "testgen",

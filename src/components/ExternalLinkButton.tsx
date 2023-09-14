@@ -22,6 +22,10 @@ const types: Record<string, ButtonType> = {
     class: "border-[#db8166] hover:shadow-[#db8166] text-[#ffa589]",
     icon: "/icons/itchio.png",
   },
+  misc: {
+    class: "border-[#286ab6] hover:shadow-[#286ab6] text-[#88c0ff]",
+    icon: "/icons/link.png",
+  },
 }
 
 function ExternalLinkButton(props: ExternalLinkButtonProps) {

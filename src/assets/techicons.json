@@ -49,10 +49,25 @@
     "icon": "javascript.svg",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
+  "jquery": {
+    "name": "jQuery",
+    "icon": "jquery.png",
+    "url": "https://jquery.com/"
+  },
+  "mathjax": {
+    "name": "MathJax",
+    "icon": "tex.svg",
+    "url": "https://www.mathjax.org/"
+  },
   "poetry": {
     "name": "Poetry",
     "icon": "poetry.svg",
     "url": "https://python-poetry.org/"
+  },
+  "postgresql": {
+    "name": "PostgreSQL",
+    "icon": "postgresql.svg",
+    "url": "https://www.postgresql.org/"
   },
   "python": {
     "name": "Python",
@@ -63,6 +78,21 @@
     "name": "React",
     "icon": "react_ts.svg",
     "url": "https://react.dev"
+  },
+  "sheetsapi": {
+    "name": "Google Sheets API",
+    "icon": "sheets.png",
+    "url": "https://developers.google.com/sheets/api"
+  },
+  "sqlalchemy": {
+    "name": "SQLAlchemy (ORM)",
+    "icon": "sqlalchemy.png",
+    "url": "https://www.sqlalchemy.org/"
+  },
+  "stripe": {
+    "name": "Stripe",
+    "icon": "stripe.png",
+    "url": "https://stripe.com/"
   },
   "tailwind": {
     "name": "Tailwind CSS",
