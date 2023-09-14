@@ -10,8 +10,7 @@ function MainBanner() {
       <div
         className="
         max-w-[100rem] mx-auto pt-20 p-10
-        min-h-fit
-        lg:h-[80vh]
+        lg:min-h-fit
         flex flex-col justify-end content-stretch
         gap-10 lg:gap-12"
       >
