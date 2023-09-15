@@ -49,6 +49,11 @@
     "icon": "javascript.svg",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
+  "jinja": {
+    "name": "Jinja",
+    "icon": "jinja.png",
+    "url": "https://jinja.palletsprojects.com/en/3.1.x/"
+  },
   "jquery": {
     "name": "jQuery",
     "icon": "jquery.png",

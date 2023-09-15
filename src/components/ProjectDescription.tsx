@@ -21,8 +21,8 @@ function ProjectDescription({ text }: { text: string }) {
   }, [text, isClamped, textTag, wasClamped])
 
   return (
-    <div className="mb-3">
-      <h5
+    <div className="mb-3 text-xl">
+      <p
         ref={textTag}
         className={
           "opacity-60 mb-1 whitespace-pre-line " +
@@ -30,7 +30,7 @@ function ProjectDescription({ text }: { text: string }) {
         }
       >
         {text}
-      </h5>
+      </p>
       {wasClamped && (
         <button
           className="opacity-80 text-[#46acff]"

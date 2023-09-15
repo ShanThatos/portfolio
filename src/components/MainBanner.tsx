@@ -11,7 +11,7 @@ function MainBanner() {
         className="
         max-w-[100rem] mx-auto pt-20 p-10
         lg:min-h-fit
-        flex flex-col justify-end content-stretch
+        flex flex-col justify-start content-stretch
         gap-10 lg:gap-12"
       >
         <div className="grow grid grid-cols-1 lg:grid-cols-2 gap-x-20">
@@ -40,7 +40,7 @@ function MainBanner() {
           </div>
           <div className="grid place-items-center px-5">
             <img
-              className="rounded-3xl w-[600px] border-8 border-[#101930]"
+              className="lg:w-[50vh] rounded-3xl border-8 border-[#101930]"
               src={mainPhotoUrl}
               alt="yay"
             />

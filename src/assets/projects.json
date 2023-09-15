@@ -11,14 +11,29 @@
         "url": "https://github.com/ShanThatos/portfolio",
         "text": "portfolio"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "id": "slap",
     "name": "SLAP - Slim Application Platform",
     "subtext": "An Application Hosting Platform to remotely host & control personal projects on my Raspberry PI.",
-    "tech": ["python", "flask", "poetry", "html", "htmx", "css", "tailwind"],
-    "media": ["slap.png"],
+    "tech": [
+      "python",
+      "flask",
+      "poetry",
+      "html",
+      "jinja",
+      "htmx",
+      "css",
+      "tailwind"
+    ],
+    "media": [
+      {
+        "src": "slap.png",
+        "caption": "The project's web interface"
+      }
+    ],
     "start": "2023-07-10",
     "end": "2023-09-09",
     "links": [
@@ -34,7 +49,16 @@
     "name": "Compile High Level to BF",
     "subtext": "An exploration of the Turing Completeness of brainf**k. I built a compiler that transforms a custom made high level language to BF. The language itself reads like a mix of C and Python. Internally, the language is first compiled down to a custom assembly language, and then compiled to BF.",
     "tech": ["python", "brainfuck"],
-    "media": ["fib.png", "spec.png"],
+    "media": [
+      {
+        "src": "fib.png",
+        "caption": "Fibonacci in my custom language"
+      },
+      {
+        "src": "spec.png",
+        "caption": "Snippet of the language spec - used to programmatically parse the language"
+      }
+    ],
     "start": "2023-04-01",
     "end": "2023-08-19",
     "links": [
@@ -106,12 +130,19 @@
       "sqlalchemy",
       "postgresql",
       "html",
+      "jinja",
       "css",
       "javascript",
       "jquery",
       "stripe",
       "sheetsapi",
       "mathjax"
+    ],
+    "media": [
+      {
+        "src": "video:https://www.youtube.com/embed/m6q4NDJckmk?enablejsapi=1",
+        "caption": "A demo of the application's earliest version"
+      }
     ],
     "start": "2018-06-02",
     "end": "2022-07-29",
@@ -120,11 +151,6 @@
         "type": "github",
         "url": "https://github.com/ShanThatos/tourney-app-deux",
         "text": "tourney-app-deux"
-      },
-      {
-        "type": "youtube",
-        "url": "https://youtu.be/m6q4NDJckmk?si=O5F6DHbhxllEL2HY",
-        "text": "Old Demo"
       },
       {
         "type": "misc",
@@ -158,7 +184,12 @@
     "name": "Custom OS Desktop Environment",
     "subtext": "Worked with a team of 40 classmates to improve our class wide operating system and have it run DOOM 1994. I was responsible for the graphics and windowing system. I created a basic implementation of X11 for DOOM - including mouse/keyboard event queueing and framebuffer manipulation. In about 20 hours of work I also individually developed a desktop environment for the OS, with support for colors, shapes, text, images, and a mouse/keyboard controlled cursor. It wasn't easy though. If you've ever looked into the structure of font & image files you would know that's an impossible task for a single person. So I came up with a workaround - I used Java to read the data for fonts/images and converted them to a custom file format that I could process in C for the desktop environment. It was a massive success and I'm very proud of the work I did. Check out the demo video below!",
     "tech": ["cpp", "c", "java"],
-    "media": ["video:https://www.youtube.com/embed/muhu8e207u4?enablejsapi=1"],
+    "media": [
+      {
+        "src": "video:https://www.youtube.com/embed/muhu8e207u4?enablejsapi=1",
+        "caption": "OS Desktop & Doom Demo Video (QEMU)"
+      }
+    ],
     "start": "2021-11-02",
     "end": "2021-12-02"
   },

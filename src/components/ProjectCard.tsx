@@ -7,7 +7,7 @@ import { A11y, Navigation, Pagination } from "swiper/modules"
 import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react"
 import PROJECTS from "../assets/projects.json"
 import ExternalLinkButton from "./ExternalLinkButton"
-import { ImageZoom } from "./ImageZoom"
+import MediaSlide from "./MediaSlide"
 import ProjectDescription from "./ProjectDescription"
 import TechIcon from "./TechIcon"
 
@@ -27,7 +27,7 @@ const MONTHS = [
 ]
 
 function ProjectCard({ project }: { project: string }) {
-  const videoEmbeds = useRef(new Map<number, HTMLIFrameElement>())
+  const videoEmbeds = useRef(new Map<number, HTMLElement>())
 
   const data = useMemo(() => PROJECTS.find((p) => p.id === project), [project])
 
@@ -50,20 +50,19 @@ function ProjectCard({ project }: { project: string }) {
 
   const onTransition = useCallback(
     (swiper: Swiper) => {
-      if (videoEmbeds.current.has(swiper.previousIndex)) {
-        videoEmbeds.current
-          .get(swiper.previousIndex)
-          ?.contentWindow?.postMessage(
-            "{\"event\":\"command\",\"func\":\"stopVideo\",\"args\":\"\"}",
-            "*"
-          )
+      const video = videoEmbeds.current.get(swiper.previousIndex)
+      if (video instanceof HTMLIFrameElement) {
+        video.contentWindow?.postMessage(
+          "{\"event\":\"command\",\"func\":\"pauseVideo\",\"args\":\"\"}",
+          "*"
+        )
       }
     },
     [project]
   )
 
   return (
-    <div className="my-20" key={project}>
+    <div className="" key={project}>
       <div className="px-5">
         <div className="flex flex-row flex-wrap justify-between mb-1">
           <h2 className="mb-0 dark:text-secondary">{data.name}</h2>
@@ -89,36 +88,17 @@ function ProjectCard({ project }: { project: string }) {
             scrollbar={{ draggable: true }}
             onRealIndexChange={onTransition}
           >
-            {data.media.map((media, index) => {
-              if (media.startsWith("video:")) {
-                const embed = media.slice(6)
-                return (
-                  <SwiperSlide key={`video-${embed}-${index}`}>
-                    <div className="w-full h-full p-10 flex">
-                      <iframe
-                        ref={(el) => {
-                          if (el) videoEmbeds.current.set(index, el)
-                        }}
-                        className="grow"
-                        src={embed}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                      />
-                    </div>
-                  </SwiperSlide>
-                )
-              } else {
-                const imgUrl = `/projects/${data.id}/${media}`
-                return (
-                  <SwiperSlide key={`${imgUrl}-${index}`}>
-                    <ImageZoom
-                      src={imgUrl}
-                      className="h-full object-contain mx-auto rounded-lg overflow-hidden"
-                    />
-                  </SwiperSlide>
-                )
-              }
-            })}
+            {data.media.map((media, index) => (
+              <SwiperSlide key={`media-${media}-${index}`}>
+                <MediaSlide
+                  project={project}
+                  media={media}
+                  ref={(el: any) => {
+                    if (el) videoEmbeds.current.set(index, el)
+                  }}
+                />
+              </SwiperSlide>
+            ))}
           </SwiperComponent>
         </div>
       )}
