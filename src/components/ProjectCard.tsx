@@ -1,15 +1,15 @@
-import parse from "html-react-parser"
 import { useCallback, useMemo, useRef } from "react"
+import Swiper from "swiper"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { A11y, Navigation, Pagination } from "swiper/modules"
 import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react"
 import PROJECTS from "../assets/projects.json"
-import { ImageZoom } from "./ImageZoom"
-import TechIcon from "./TechIcon"
-import Swiper from "swiper"
 import ExternalLinkButton from "./ExternalLinkButton"
+import { ImageZoom } from "./ImageZoom"
+import ProjectDescription from "./ProjectDescription"
+import TechIcon from "./TechIcon"
 
 const MONTHS = [
   "Jan",
@@ -69,9 +69,7 @@ function ProjectCard({ project }: { project: string }) {
           <h2 className="mb-0 dark:text-secondary">{data.name}</h2>
           <h2 className="mb-0 dark:text-secondary">{displayDate}</h2>
         </div>
-        {data.subtext && (
-          <h5 className="opacity-60 mb-3">{parse(data.subtext)}</h5>
-        )}
+        {data.subtext && <ProjectDescription text={data.subtext} />}
         {data.tech && (
           <div className="flex flex-row justify-start items-center flex-wrap mb-3 px-2 gap-3">
             {data.tech.map((t) => (
