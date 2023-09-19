@@ -21,10 +21,11 @@ export default function Footer() {
         setMessage("")
         alert("Message sent!")
       }
-    } finally {
-      setContactDisabled(false)
+    } catch (e) {
+      console.error(e)
     }
-  }, [])
+    setContactDisabled(false)
+  }, [message])
 
   return (
     <div className="my-10 bg-background-100">
@@ -52,6 +53,7 @@ export default function Footer() {
               <textarea
                 className="w-full h-full bg-[#363c4a] rounded-lg border-2 border-permablack p-2"
                 placeholder="Send me a message :D"
+                value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
