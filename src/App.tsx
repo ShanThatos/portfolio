@@ -4,6 +4,7 @@ import MainBanner from "./components/MainBanner"
 import ProjectCard from "./components/ProjectCard"
 
 import nightwind from "nightwind/helper"
+import Footer from "./components/Footer"
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
           Toggle Nightwind
         </button> */}
       </div>
+      <Footer />
     </>
   )
 }

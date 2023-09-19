@@ -1,24 +1,24 @@
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 function ProjectDescription({ text }: { text: string }) {
-  const [wasClamped, setWasClamped] = useState(false)
-  const [isClamped, setIsClamped] = useState(true)
-  const [showReadMore, setShowReadMore] = useState(true)
   const textTag = useRef<HTMLHeadingElement>(null)
+  const [needsClamp, setNeedsClamp] = useState(false)
+  const [isClamped, setIsClamped] = useState(true)
 
-  useEffect(() => {
+  const updateClamp = useCallback(() => {
     if (
+      !needsClamp &&
       textTag.current &&
       textTag.current?.scrollHeight > textTag.current?.offsetHeight
     )
-      setWasClamped(true)
+      setNeedsClamp(true)
+  }, [textTag])
 
-    setShowReadMore(
-      (textTag.current &&
-        textTag.current?.scrollHeight > textTag.current?.offsetHeight) ||
-        false
-    )
-  }, [text, isClamped, textTag, wasClamped])
+  useEffect(() => {
+    updateClamp()
+    const tid = setTimeout(updateClamp, 1000)
+    return () => clearTimeout(tid)
+  }, [])
 
   return (
     <div className="mb-3 text-xl">
@@ -31,12 +31,12 @@ function ProjectDescription({ text }: { text: string }) {
       >
         {text}
       </p>
-      {wasClamped && (
+      {needsClamp && (
         <button
           className="opacity-80 text-[#46acff]"
-          onClick={() => setIsClamped(!showReadMore)}
+          onClick={() => setIsClamped(!isClamped)}
         >
-          {showReadMore ? "Show More..." : "Show Less..."}
+          {isClamped ? "Show More..." : "Show Less..."}
         </button>
       )}
     </div>

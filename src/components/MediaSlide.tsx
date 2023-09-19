@@ -17,15 +17,18 @@ const MediaSlide = forwardRef(function MediaSlide(
   return (
     <div className="w-full h-full relative">
       {caption && (
-        <div className="absolute left-0 bottom-10 right-0 z-20 text-center">
-          <label
-            className="
-          py-1 px-8 rounded-full 
-          bg-permablack 
-          opacity-90 hover:opacity-10 transition-opacity"
-          >
-            {caption}
-          </label>
+        <div className="absolute left-0 right-0 bottom-10 text-center">
+          <div className="mx-auto w-[80%]">
+            <label
+              className="
+                py-1 px-8 rounded-full 
+                bg-permablack 
+                opacity-90 hover:opacity-10 transition-opacity
+                box-decoration-clone"
+            >
+              {caption}
+            </label>
+          </div>
         </div>
       )}
       {media.startsWith("video:") ? (

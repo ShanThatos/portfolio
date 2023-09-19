@@ -26,6 +26,12 @@ const MONTHS = [
   "Dec",
 ]
 
+const toDateDisplay = (date: string) => {
+  if (date === "present") return "Present"
+  const d = new Date(date)
+  return `${MONTHS[d.getMonth()]} ${d.getFullYear()}`
+}
+
 function ProjectCard({ project }: { project: string }) {
   const videoEmbeds = useRef(new Map<number, HTMLElement>())
 
@@ -33,12 +39,6 @@ function ProjectCard({ project }: { project: string }) {
 
   if (!data) throw new Error(`Project ${project} not found`)
   if (data?.hidden) return <></>
-
-  const toDateDisplay = (date: string) => {
-    if (date === "present") return "Present"
-    const d = new Date(date)
-    return `${MONTHS[d.getMonth()]} ${d.getFullYear()}`
-  }
 
   const displayDate = useMemo(() => {
     if (data.start === undefined) return ""
