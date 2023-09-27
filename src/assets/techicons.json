@@ -118,5 +118,10 @@
     "name": "Vite",
     "icon": "vite.svg",
     "url": "https://vitejs.dev/"
+  },
+  "webxr": {
+    "name": "WebXR",
+    "icon": "webxr.png",
+    "url": "https://immersiveweb.dev"
   }
 }

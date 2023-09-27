@@ -113,7 +113,27 @@
   {
     "id": "xrdemo",
     "name": "WebXR Hand Tracking Demo",
-    "hidden": true
+    "subtext": "For years I've been fascinated with the VR space, so much so that I pre-ordered the Oculus Quest back when it was first announced. This demo is a small final project I worked on for a Graphics class I took. It's built from scratch with TypeScript and uses WebXR APIs to interface with XR capable devices and Hand Tracking. The demo itself features a couple WebGL experiments, and a fully-functioning piano that you can play with your hands!",
+    "tech": ["typescript", "webxr"],
+    "media": [
+      "video:https://www.youtube.com/embed/fEodmbYcrYc",
+      "video:https://www.youtube.com/embed/HP4NSQZV_FA",
+      "video:https://www.youtube.com/embed/Fx9BF3J9ffk"
+    ],
+    "start": "2022-04-02",
+    "end": "2022-05-02",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/vrdemo",
+        "text": "vrdemo"
+      },
+      {
+        "type": "misc",
+        "url": "https://webxrdemo.shanthatos.dev",
+        "text": "Live Demo"
+      }
+    ]
   },
   {
     "id": "ineedahero",
