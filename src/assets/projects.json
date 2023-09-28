@@ -150,7 +150,30 @@
   {
     "id": "ineedahero",
     "name": "I Need A Hero - Godot Game",
-    "hidden": true
+    "subtext": "Attempted to build an AR/VR tabletop tower defense game in Godot. This was my final project for a Game Technology course. I only had about 2 weeks to work on this, so I didn't get to make much progress on it. I did however get it to a proof of concept state where you can place down blocks and defend against enemies.",
+    "tech": ["godot"],
+    "media": [
+      {
+        "src": "video:https://www.youtube.com/embed/6iUE8Adpo78",
+        "caption": "Made this in a couple hours :D"
+      },
+      "video:https://www.youtube.com/embed/JSNHY7wqvLw"
+    ],
+    "start": "2022-11-18",
+    "end": "2022-12-07",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/INeedAHero",
+        "text": "INeedAHero"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/playlist?list=PLBpN2wEoKkxn8vCr1ck--l-5x3l-8j5-s",
+        "text": "More Gameplay & Demos"
+      }
+    ],
+    "tags": ["gamedev", "arvr"]
   },
   {
     "id": "txmc",

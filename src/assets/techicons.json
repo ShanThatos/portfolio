@@ -54,6 +54,11 @@
     "icon": "gamedev.png",
     "url": ""
   },
+  "godot": {
+    "name": "Godot",
+    "icon": "godot.svg",
+    "url": "https://godotengine.org"
+  },
   "html": {
     "name": "HTML",
     "icon": "html.svg",

@@ -22,7 +22,7 @@ interface Project {
   tags?: string[]
 }
 
-type SortKey = "id" | "name" | "end"
+type SortKey = "name" | "end"
 type SortOrder = "asc" | "desc"
 
 export type { Project, SortKey, SortOrder }
