@@ -42,7 +42,8 @@
         "url": "https://github.com/ShanThatos/beepi-process-controller",
         "text": "beepi-process-controller"
       }
-    ]
+    ],
+    "tags": ["python", "flask", "html", "css", "backend"]
   },
   {
     "id": "c2bf",
@@ -67,7 +68,8 @@
         "url": "https://github.com/ShanThatos/compile-to-bf",
         "text": "compile-to-bf"
       }
-    ]
+    ],
+    "tags": ["python"]
   },
   {
     "id": "interim",
@@ -103,7 +105,8 @@
         "url": "https://www.youtube.com/playlist?list=PLBpN2wEoKkxkFergviLp2kCFm5mdMCPhk",
         "text": "Gameplay"
       }
-    ]
+    ],
+    "tags": ["gamedev", "csharp"]
   },
   {
     "id": "moviegame",
@@ -133,7 +136,8 @@
         "url": "https://webxrdemo.shanthatos.dev",
         "text": "Live Demo"
       }
-    ]
+    ],
+    "tags": ["javascript", "typescript", "arvr"]
   },
   {
     "id": "ineedahero",
@@ -177,6 +181,17 @@
         "url": "http://web.archive.org/web/20220123055616/https://www.texasmathcontests.com/",
         "text": "Web Archive"
       }
+    ],
+    "tags": [
+      "python",
+      "flask",
+      "html",
+      "css",
+      "sql",
+      "javascript",
+      "fullstack",
+      "backend",
+      "frontend"
     ]
   },
   {
@@ -221,8 +236,6 @@
     "media": [],
     "start": "",
     "end": "",
-    "repo": "",
-    "repo_name": "",
     "hidden": true
   }
 ]
