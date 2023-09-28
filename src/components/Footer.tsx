@@ -79,7 +79,7 @@ export default function Footer() {
           >
             <h4 className="mb-0">Check out this portfolio&apos;s repo!</h4>
           </a>
-          <div className="flex flex-row justify-center items-center gap-2">
+          <div className="flex flex-row flex-wrap justify-center items-center gap-2">
             <TechIcon name="react" />
             <TechIcon name="typescript" />
             <TechIcon name="tailwind" />
