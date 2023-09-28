@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react"
+import TechIcon from "./TechIcon"
 
 export default function Footer() {
   const [contactDisabled, setContactDisabled] = useState(false)
@@ -66,6 +67,23 @@ export default function Footer() {
                 Contact Me!
               </button>
             </div>
+          </div>
+        </div>
+        <div className="my-5 border-t-2 border-permawhite opacity-10"></div>
+        <div className="grid place-items-center">
+          <a
+            className="underline text-[#a2b3ff] hover:text-[#738dff] mb-3"
+            href="https://github.com/ShanThatos/portfolio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h4 className="mb-0">Check out this portfolio&apos;s repo!</h4>
+          </a>
+          <div className="flex flex-row justify-center items-center gap-2">
+            <TechIcon name="react" />
+            <TechIcon name="typescript" />
+            <TechIcon name="tailwind" />
+            <TechIcon name="vite" />
           </div>
         </div>
       </div>
