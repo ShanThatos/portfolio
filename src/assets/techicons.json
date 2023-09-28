@@ -1,4 +1,14 @@
 {
+  "arvr": {
+    "name": "AR/VR",
+    "icon": "arvr.png",
+    "url": ""
+  },
+  "backend": {
+    "name": "Backend",
+    "icon": "backend.png",
+    "url": ""
+  },
   "brainfuck": {
     "name": "Brainf**k",
     "icon": "brainfuck.svg",
@@ -28,6 +38,21 @@
     "name": "Flask",
     "icon": "flask.png",
     "url": "https://flask.palletsprojects.com/"
+  },
+  "frontend": {
+    "name": "Frontend",
+    "icon": "frontend.png",
+    "url": ""
+  },
+  "fullstack": {
+    "name": "Fullstack",
+    "icon": "fullstack.png",
+    "url": ""
+  },
+  "gamedev": {
+    "name": "Game Dev",
+    "icon": "gamedev.png",
+    "url": ""
   },
   "html": {
     "name": "HTML",
@@ -88,6 +113,11 @@
     "name": "Google Sheets API",
     "icon": "sheets.png",
     "url": "https://developers.google.com/sheets/api"
+  },
+  "sql": {
+    "name": "SQL",
+    "icon": "database.svg",
+    "url": ""
   },
   "sqlalchemy": {
     "name": "SQLAlchemy (ORM)",

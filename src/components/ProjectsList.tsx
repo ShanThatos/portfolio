@@ -6,10 +6,10 @@ import ProjectCard from "./ProjectCard"
 interface ProjectsListProps {
   sortKey?: SortKey
   sortOrder?: SortOrder
-  filters?: Set<string>
+  filters?: string[]
 }
 
-function filterSort(key: SortKey, order: SortOrder, filters: Set<string>) {
+function filterSort(key: SortKey, order: SortOrder, filters: string[]) {
   const projects = [...PROJECTS] satisfies Project[]
 
   const results = projects
@@ -41,7 +41,7 @@ function filterSort(key: SortKey, order: SortOrder, filters: Set<string>) {
 export default function ProjectsList(props: ProjectsListProps) {
   const sortKey = props.sortKey ?? "end"
   const sortOrder = props.sortOrder ?? "asc"
-  const filters = props.filters ?? new Set<string>()
+  const filters = props.filters ?? []
 
   const projects = useMemo(
     () => filterSort(sortKey, sortOrder, filters),

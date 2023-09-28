@@ -43,7 +43,15 @@
         "text": "beepi-process-controller"
       }
     ],
-    "tags": ["python", "flask", "html", "css", "backend"]
+    "tags": [
+      "python",
+      "flask",
+      "html",
+      "css",
+      "fullstack",
+      "backend",
+      "frontend"
+    ]
   },
   {
     "id": "c2bf",
@@ -137,7 +145,7 @@
         "text": "Live Demo"
       }
     ],
-    "tags": ["javascript", "typescript", "arvr"]
+    "tags": ["javascript", "typescript", "gamedev", "arvr"]
   },
   {
     "id": "ineedahero",
@@ -226,7 +234,8 @@
       }
     ],
     "start": "2021-11-02",
-    "end": "2021-12-02"
+    "end": "2021-12-02",
+    "tags": ["cpp", "c", "java"]
   },
   {
     "id": "",
