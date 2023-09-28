@@ -27,7 +27,11 @@ function MainBanner() {
               <h1 className="text-5xl text-accent-900 dark:text-accent-700">
                 <Typewriter
                   options={{
-                    strings: ["Software Engineer", "Web Developer"],
+                    strings: [
+                      "Software Engineer",
+                      "Web Developer",
+                      "Game Developer",
+                    ],
                     delay: 80,
                     deleteSpeed: 80,
                     pauseFor: 5000,
