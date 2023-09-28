@@ -118,8 +118,19 @@
   },
   {
     "id": "moviegame",
-    "name": "Six Degrees of Kevin Bacon",
-    "hidden": true
+    "name": "Movie Game Mobile App - React Native",
+    "subtext": "Ever heard of Six Degrees of Kevin Bacon? This was my attempt at a mobile app version of it! I used React Native with Expo to build it. Shoutout to the TMDB API, it's amazing.",
+    "tech": ["typescript", "react", "reactnative"],
+    "media": [
+      "sequence.jpg",
+      {
+        "src": "video:https://www.youtube.com/embed/LEqC9RyPLV0?enablejsapi=1",
+        "caption": "Early prototype"
+      }
+    ],
+    "start": "2022-02-03",
+    "end": "2022-03-23",
+    "tags": ["typescript", "javascript", "gamedev", "frontend"]
   },
   {
     "id": "xrdemo",
@@ -127,9 +138,9 @@
     "subtext": "For years I've been fascinated with the VR space, so much so that I pre-ordered the Oculus Quest back when it was first announced. This demo is a small final project I worked on for a Graphics class I took. It's built from scratch with TypeScript and uses WebXR APIs to interface with XR capable devices and Hand Tracking. The demo itself features a couple WebGL experiments, and a fully-functioning piano that you can play with your hands!",
     "tech": ["typescript", "webxr"],
     "media": [
-      "video:https://www.youtube.com/embed/fEodmbYcrYc",
-      "video:https://www.youtube.com/embed/HP4NSQZV_FA",
-      "video:https://www.youtube.com/embed/Fx9BF3J9ffk"
+      "video:https://www.youtube.com/embed/fEodmbYcrYc?enablejsapi=1",
+      "video:https://www.youtube.com/embed/HP4NSQZV_FA?enablejsapi=1",
+      "video:https://www.youtube.com/embed/Fx9BF3J9ffk?enablejsapi=1"
     ],
     "start": "2022-04-02",
     "end": "2022-05-02",
@@ -154,10 +165,10 @@
     "tech": ["godot"],
     "media": [
       {
-        "src": "video:https://www.youtube.com/embed/6iUE8Adpo78",
+        "src": "video:https://www.youtube.com/embed/6iUE8Adpo78?enablejsapi=1",
         "caption": "Made this in a couple hours :D"
       },
-      "video:https://www.youtube.com/embed/JSNHY7wqvLw"
+      "video:https://www.youtube.com/embed/JSNHY7wqvLw?enablejsapi=1"
     ],
     "start": "2022-11-18",
     "end": "2022-12-07",
