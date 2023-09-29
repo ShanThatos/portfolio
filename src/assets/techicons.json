@@ -119,10 +119,20 @@
     "icon": "reactnative.png",
     "url": "https://reactnative.dev"
   },
+  "sass": {
+    "name": "Sass",
+    "icon": "sass.svg",
+    "url": "https://sass-lang.com/"
+  },
   "sheetsapi": {
     "name": "Google Sheets API",
     "icon": "sheets.png",
     "url": "https://developers.google.com/sheets/api"
+  },
+  "solidjs": {
+    "name": "Solid.js",
+    "icon": "solidjs.png",
+    "url": "https://www.solidjs.com/"
   },
   "sql": {
     "name": "SQL",

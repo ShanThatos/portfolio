@@ -86,6 +86,7 @@
     "tech": ["unity", "csharp"],
     "media": [
       "interim.png",
+      "dream6.png",
       "video:https://www.youtube.com/embed/8we3EDxP0gE?enablejsapi=1",
       "houseprison.png",
       "cavern.png"
@@ -244,7 +245,24 @@
   {
     "id": "spritegen",
     "name": "Spritesheet Generator",
-    "hidden": true
+    "subtext": "About a month into my 2D gamedev project (Interim), our team realized that we needed a dedicated spritesheet generating tool. Basically, this tool should take a folder of images/frames for a sprite, and then combine them into a single tiled image. Took a couple days but I built this website and it worked like a charm. The tool works completely in the browser and it's built with SolidJS (ditched React for some excitement).",
+    "tech": ["typescript", "solidjs", "sass", "vite"],
+    "media": ["spritegen.png", "spritegen2.png"],
+    "start": "2022-11-04",
+    "end": "2022-11-06",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/spritegen",
+        "text": "spritegen"
+      },
+      {
+        "type": "misc",
+        "url": "https://spritegen.shanthatos.dev",
+        "text": "Live Demo"
+      }
+    ],
+    "tags": ["html", "css", "javascript", "typescript", "frontend"]
   },
   {
     "id": "pymacros",
