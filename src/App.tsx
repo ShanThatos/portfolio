@@ -46,12 +46,12 @@ function App() {
                 {filters.length} {filters.length === 1 ? "filter" : "filters"}
               </label>
               {filters.length > 0 && (
-                <a
+                <button
                   className="text-xl text-secondary-200 hover:cursor-pointer"
                   onClick={() => setFilters([])}
                 >
                   Clear
-                </a>
+                </button>
               )}
             </div>
           </div>

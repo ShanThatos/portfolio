@@ -10,7 +10,7 @@ function TechIcon({ name }: { name: string }) {
         href={url}
         className="hover:opacity-60 transition-opacity"
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer external nofollow"
       >
         <div
           className="bg-[#252525] p-1.5 pr-2 rounded-md 

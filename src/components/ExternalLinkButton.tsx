@@ -37,7 +37,7 @@ function ExternalLinkButton(props: ExternalLinkButtonProps) {
       }
       href={props.href}
       target="_blank"
-      rel="noreferrer"
+      rel="external noreferrer"
     >
       <div className="flex flex-row items-center">
         <img src={types[props.type].icon} className="w-8 h-8" />

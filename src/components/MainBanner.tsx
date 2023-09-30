@@ -68,7 +68,7 @@ function MainBanner() {
                 bg-[#00000088]"
               href="https://www.linkedin.com/in/shanth-koka-603987224/"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer external"
             >
               <div className="flex flex-row justify-center items-center">
                 <img src="/icons/linkedin.png" className="w-8 h-8" />
@@ -104,7 +104,7 @@ function MainBanner() {
                 bg-[#00000088]"
               href="https://github.com/ShanThatos"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer external"
             >
               <div className="flex flex-row justify-center items-center">
                 <img src="/icons/github.svg" className="w-8 h-8" />
@@ -122,7 +122,7 @@ function MainBanner() {
                 bg-[#00000088]"
               href="https://youtube.com/@shanthkoka6506"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer external"
             >
               <div className="flex flex-row justify-center items-center">
                 <img src="/icons/youtube.png" className="w-8 h-8" />
