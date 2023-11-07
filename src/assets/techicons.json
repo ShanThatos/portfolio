@@ -34,6 +34,11 @@
     "icon": "css.svg",
     "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
   },
+  "fastapi": {
+    "name": "FastAPI",
+    "icon": "fastapi.png",
+    "url": "https://fastapi.tiangolo.com"
+  },
   "flask": {
     "name": "Flask",
     "icon": "flask.png",
@@ -88,6 +93,11 @@
     "name": "jQuery",
     "icon": "jquery.png",
     "url": "https://jquery.com/"
+  },
+  "katex": {
+    "name": "KaTeX",
+    "icon": "tex.svg",
+    "url": "https://katex.org"
   },
   "mathjax": {
     "name": "MathJax",

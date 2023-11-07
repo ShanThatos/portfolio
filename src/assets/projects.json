@@ -15,6 +15,37 @@
     "hidden": true
   },
   {
+    "id": "numblitz",
+    "name": "NumBlitz - Mental Math Mobile App",
+    "tech": [
+      "python",
+      "fastapi",
+      "sqlalchemy",
+      "postgresql",
+      "typescript",
+      "reactnative",
+      "tailwind",
+      "katex"
+    ],
+    "start": "2023-10-10",
+    "end": "present",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/numblitz-server",
+        "text": "Server Repo"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/numblitz-app",
+        "text": "App Repo"
+      }
+    ],
+    "tags": [
+      "python", "typescript", "javascript", "sql", "fullstack", "backend", "frontend"
+    ]
+  },
+  {
     "id": "slap",
     "name": "SLAP - Slim Application Platform",
     "subtext": "An Application Hosting Platform to remotely host & control personal projects on my Raspberry PI.",
