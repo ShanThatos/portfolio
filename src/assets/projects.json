@@ -27,6 +27,12 @@
       "tailwind",
       "katex"
     ],
+    "media": [
+      "categories.jpg",
+      "trickslist.jpg",
+      "trick.jpg",
+      "quiz.jpg"
+    ],
     "start": "2023-10-10",
     "end": "present",
     "links": [
