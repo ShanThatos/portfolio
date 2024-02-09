@@ -62,7 +62,7 @@ function ProjectCard({ project }: { project: string }) {
   )
 
   return (
-    <div className="" key={project}>
+    <div id={project} className="" key={project}>
       <div className="px-5">
         <div className="flex flex-row flex-wrap justify-between mb-1">
           <h2 className="mb-0 dark:text-secondary">{data.name}</h2>
