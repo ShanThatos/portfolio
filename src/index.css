@@ -60,6 +60,10 @@
   --swiper-displays: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .swiper-pagination,
 .swiper-button-next:not(.swiper-button-lock),
 .swiper-button-prev:not(.swiper-button-lock) {

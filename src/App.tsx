@@ -30,6 +30,9 @@ function App() {
 
   useEffect(() => {
     nightwind.enable(true)
+    setTimeout(() => {
+      document.getElementById(window.location.hash.substring(1))?.scrollIntoView()
+    }, 200)
   }, [])
 
   return (
