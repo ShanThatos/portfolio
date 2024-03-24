@@ -15,6 +15,28 @@
     "hidden": true
   },
   {
+    "id": "openaichess",
+    "name": "OpenAI Chess",
+    "subtext": "Play chess against ChatGPT! Built this project in about 10 hours :D. Check out the demo!",
+    "tech": ["python", "fastapi", "htmx"],
+    "media": ["screenshot.png"],
+    "start": "2024-03-16",
+    "end": "2024-03-17",
+    "links": [
+      {
+        "type": "misc",
+        "url": "https://chess.shanthatos.dev",
+        "text": "Live Demo"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/ShanThatos/openai-chess",
+        "text": "openai-chess"
+      }
+    ],
+    "tags": ["python", "fullstack", "frontend", "backend", "gamedev"]
+  },
+  {
     "id": "numblitz",
     "name": "NumBlitz - Mental Math Mobile App",
     "tech": [
@@ -27,12 +49,7 @@
       "tailwind",
       "katex"
     ],
-    "media": [
-      "categories.jpg",
-      "trickslist.jpg",
-      "trick.jpg",
-      "quiz.jpg"
-    ],
+    "media": ["categories.jpg", "trickslist.jpg", "trick.jpg", "quiz.jpg"],
     "start": "2023-10-10",
     "end": "present",
     "links": [
@@ -48,7 +65,13 @@
       }
     ],
     "tags": [
-      "python", "typescript", "javascript", "sql", "fullstack", "backend", "frontend"
+      "python",
+      "typescript",
+      "javascript",
+      "sql",
+      "fullstack",
+      "backend",
+      "frontend"
     ]
   },
   {
