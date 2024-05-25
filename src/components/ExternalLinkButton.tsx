@@ -32,7 +32,7 @@ function ExternalLinkButton(props: ExternalLinkButtonProps) {
   return (
     <a
       className={
-        "border p-2 rounded hover:underline hover:shadow-md hover:opacity-80 transition-shadow" +
+        "border p-1.5 md:p-2 rounded hover:underline hover:shadow-md hover:opacity-80 transition-shadow" +
         types[props.type].class
       }
       href={props.href}
@@ -40,7 +40,7 @@ function ExternalLinkButton(props: ExternalLinkButtonProps) {
       rel="external noreferrer"
     >
       <div className="flex flex-row items-center">
-        <img src={types[props.type].icon} className="w-8 h-8" />
+        <img src={types[props.type].icon} className="w-5 h-5 md:w-8 md:h-8" />
         <span className="ml-2">{props.text}</span>
       </div>
     </a>

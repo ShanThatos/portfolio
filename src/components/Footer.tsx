@@ -29,30 +29,30 @@ export default function Footer() {
   }, [message])
 
   return (
-    <div className="my-10 bg-background-100">
-      <div className="max-w-5xl p-8 mx-auto">
+    <div className="my-2 md:my-10 bg-background-800">
+      <div className="max-w-5xl p-3 md:p-8 mx-auto">
         <div className="flex flex-col px-12 md:px-0 md:flex-row justify-stretch items-stretch">
           <div className="flex-1 text-center">
-            <div className="w-full h-full p-5 grid place-items-center">
-              <div>
+            <div className="w-full h-full pt-2 px-5 grid place-items-center">
+              <div className="mb-3">
                 <h2>Shanth Koka</h2>
                 <a
-                  className="text-accent-800"
+                  className="text-accent-100"
                   href="mailto:shanthkoka@gmail.com"
                 >
                   shanthkoka@gmail.com
                 </a>
                 <br />
-                <a className="text-accent-800" href="tel:7138254004">
+                <a className="text-accent-100" href="tel:7138254004">
                   (713) 825-4004
                 </a>
               </div>
             </div>
           </div>
-          <div className="flex-1 px-3 py-1 flex flex-col justify-stretch items-stretch gap-3">
+          <div className="flex-1 px-3 py-2 flex flex-col justify-stretch items-stretch gap-3">
             <div className="flex-auto">
               <textarea
-                className="w-full h-full bg-[#363c4a] rounded-lg border-2 border-permablack p-2"
+                className="w-full h-full bg-[#363c4a] rounded-lg border-2 border-black p-2"
                 placeholder="Send me a message :D"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -60,7 +60,7 @@ export default function Footer() {
             </div>
             <div className="flex-shrink grid place-items-center">
               <button
-                className="bg-primary-100 disabled:opacity-50 px-3 py-1 rounded enabled:hover:opacity-80"
+                className="bg-primary-800 disabled:opacity-50 px-3 py-1 rounded enabled:hover:opacity-80"
                 onClick={onClick}
                 disabled={contactDisabled || message.trim() === ""}
               >
@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="my-5 border-t-2 border-permawhite opacity-10"></div>
+        <div className="my-5 border-t-2 border-white opacity-10"></div>
         <div className="grid place-items-center">
           <a
             className="underline text-[#a2b3ff] hover:text-[#738dff] mb-3"
@@ -79,11 +79,15 @@ export default function Footer() {
           >
             <h4 className="mb-0">Check out this portfolio&apos;s repo!</h4>
           </a>
-          <div className="flex flex-row flex-wrap justify-center items-center gap-2">
-            <TechIcon name="react" />
-            <TechIcon name="typescript" />
-            <TechIcon name="tailwind" />
-            <TechIcon name="vite" />
+          <div className="flex flex-row flex-wrap justify-center items-center gap-2 px-5">
+            <div className="flex flex-row gap-2">
+              <TechIcon name="react" />
+              <TechIcon name="typescript" />
+            </div>
+            <div className="flex flex-row gap-2">
+              <TechIcon name="tailwind" />
+              <TechIcon name="vite" />
+            </div>
           </div>
         </div>
       </div>

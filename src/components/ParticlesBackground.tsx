@@ -2,16 +2,11 @@ import { useCallback } from "react"
 import Particles from "react-particles"
 import type { Engine } from "tsparticles-engine"
 import { loadStarsPreset } from "tsparticles-preset-stars"
-import { useTheme } from "../hooks/NightwindHooks"
 
 function ParticlesBackground() {
   const particleInit = useCallback(async (engine: Engine) => {
     await loadStarsPreset(engine)
   }, [])
-
-  const theme = useTheme()
-  const particleColor =
-    theme === null ? "" : theme === "dark" ? "#fff" : "#112B46"
 
   return (
     <Particles
@@ -27,7 +22,7 @@ function ParticlesBackground() {
             },
           },
           color: {
-            value: particleColor,
+            value: "#fff",
           },
           opacity: {
             value: {

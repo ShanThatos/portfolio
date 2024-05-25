@@ -1,7 +1,6 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import MainBanner from "./components/MainBanner"
 
-import nightwind from "nightwind/helper"
 import FilterIcon from "./components/FilterIcon"
 import Footer from "./components/Footer"
 import ProjectsList from "./components/ProjectsList"
@@ -28,20 +27,14 @@ function App() {
     setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
   }, [])
 
-  useEffect(() => {
-    nightwind.enable(true)
-    setTimeout(() => {
-      document.getElementById(window.location.hash.substring(1))?.scrollIntoView()
-    }, 200)
-  }, [])
 
   return (
     <>
       <MainBanner />
-      <div className="max-w-5xl p-4 mx-auto">
-        <h1 className="mt-5 mb-5 text-center text-secondary-800 dark:text-secondary-200">
+      <div className="max-w-5xl p-4 md:px-10 mx-auto">
+        <h2 className="mt-5 mb-5 text-center text-secondary-200">
           My Projects
-        </h1>
+        </h2>
         <div className="flex flex-row mx-5 mb-2">
           <div className="grow">
             <div className="my-2">
@@ -50,7 +43,7 @@ function App() {
               </label>
               {filters.length > 0 && (
                 <button
-                  className="text-xl text-secondary-200 hover:cursor-pointer"
+                  className="text-xl text-secondary-400 hover:cursor-pointer"
                   onClick={() => setFilters([])}
                 >
                   Clear
@@ -113,7 +106,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap gap-4 mx-5 mb-14">
+        <div className="flex flex-row flex-wrap gap-2 md:gap-4 mx-5 mb-14">
           {PROJECT_TAGS.map((tag) => {
             const selected = filters.includes(tag)
             return (
@@ -133,12 +126,6 @@ function App() {
           })}
         </div>
         <ProjectsList {...{ sortKey, sortOrder, filters }} />
-        {/* <button
-          className="fixed bottom-8 right-8 bg-primary hover:bg-primary-600 text-permablack font-bold py-2 px-4 rounded"
-          onClick={() => nightwind.toggle()}
-        >
-          Toggle Nightwind
-        </button> */}
       </div>
       <Footer />
     </>

@@ -5,26 +5,26 @@ import ParticlesBackground from "./ParticlesBackground"
 function MainBanner() {
   return (
     <div className="w-full relative">
-      <div className="absolute top-0 left-0 bottom-0 right-0 bg-background-100 -z-20"></div>
+      <div className="absolute top-0 left-0 bottom-0 right-0 bg-background-800 -z-20"></div>
       <ParticlesBackground />
       <div
         className="
-        max-w-[100rem] mx-auto pt-20 p-10
+        max-w-[100rem] mx-auto pt-10 md:pt-20 p-10
         lg:min-h-fit
         flex flex-col justify-start content-stretch
-        gap-10 lg:gap-12"
+        gap-5 lg:gap-12"
       >
         <div className="grow grid grid-cols-1 lg:grid-cols-2 gap-x-20">
           <div className="grid place-items-center">
             <div className="w-[23rem]">
-              <h1 className="text-6xl">Hey there!</h1>
-              <h1 className="text-5xl">
-                I&apos;m{" "}
-                <span className="text-primary-900 dark:text-primary-500">
+              <h1 className="text-4xl md:text-6xl">Hey there!</h1>
+              <h1 className="text-3xl md:text-5xl">
+                {"I'm "}
+                <span className="text-primary-500">
                   Shanth Koka
                 </span>
               </h1>
-              <h1 className="text-5xl text-accent-900 dark:text-accent-700">
+              <h1 className="text-3xl md:text-5xl text-accent-200">
                 <Typewriter
                   options={{
                     strings: [
@@ -44,19 +44,17 @@ function MainBanner() {
           </div>
           <div className="grid place-items-center px-5">
             <img
-              className="lg:w-[50vh] rounded-3xl border-8 border-[#101930]"
+              className="lg:w-[40vh] rounded-3xl border-8 border-[#101930]"
               src={mainPhotoUrl}
               alt="yay"
             />
           </div>
         </div>
         <div className="max-w-6xl mx-auto justify-self-end flex flex-col justify-center">
-          <h2 className="text-3xl text-center opacity-70 mx-10">
-            Welcome to my corner of the web! I&apos;m Shanth Koka, a techie who
-            finds solace in the elegance of code. I hope you enjoy this
-            sneak-peek into my world of bits and bytes.
+          <h2 className="text-xl md:text-3xl text-center opacity-70 text-white">
+            Welcome to my corner of the web!
           </h2>
-          <div className="my-10 flex flex-row flex-wrap justify-center items-center gap-6">
+          <div className="my-3 md:my-10 flex flex-row flex-wrap justify-center items-center gap-6">
             <a
               className="
                 w-[8rem]

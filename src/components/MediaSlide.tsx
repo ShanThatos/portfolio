@@ -1,12 +1,12 @@
-import { forwardRef } from "react"
 import { ImageZoom } from "./ImageZoom"
+import MediaSlideVideo from "./MediaSlideVideo"
 
-const MediaSlide = forwardRef(function MediaSlide(
+const MediaSlide = function MediaSlide(
   {
     project,
     media,
-  }: { project: string; media: string | { src: string; caption: string } },
-  ref: any
+    onIframeLoad,
+  }: { project: string; media: string | { src: string; caption: string }, onIframeLoad?: (el: any) => void },
 ) {
   let caption = undefined
   if (typeof media === "object") {
@@ -17,14 +17,16 @@ const MediaSlide = forwardRef(function MediaSlide(
   return (
     <div className="w-full h-full relative">
       {caption && (
-        <div className="absolute left-0 right-0 bottom-10 text-center">
+        <div className="absolute left-0 right-0 bottom-10 text-center z-10">
           <div className="mx-auto w-[80%]">
             <label
               className="
                 py-1 px-8 rounded-full 
-                bg-permablack 
+                bg-black 
                 opacity-90 hover:opacity-10 transition-opacity
-                box-decoration-clone"
+                box-decoration-clone
+                text-sm md:text-base
+                "
             >
               {caption}
             </label>
@@ -32,15 +34,7 @@ const MediaSlide = forwardRef(function MediaSlide(
         </div>
       )}
       {media.startsWith("video:") ? (
-        <div className="h-full p-10 flex">
-          <iframe
-            ref={ref}
-            className="grow"
-            src={media.slice(6)}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </div>
+        <MediaSlideVideo videoId={media.slice(6)} onIframeLoad={onIframeLoad}/>
       ) : (
         <ImageZoom
           src={`/projects/${project}/${media}`}
@@ -49,6 +43,6 @@ const MediaSlide = forwardRef(function MediaSlide(
       )}
     </div>
   )
-})
+}
 
 export default MediaSlide

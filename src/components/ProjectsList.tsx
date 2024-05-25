@@ -49,7 +49,7 @@ export default function ProjectsList(props: ProjectsListProps) {
   )
 
   return (
-    <div className="flex flex-col gap-28">
+    <div className="flex flex-col gap-10 md:gap-20">
       {projects.map((p) => (
         <ProjectCard key={p.id} project={p.id} />
       ))}

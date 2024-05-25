@@ -147,7 +147,7 @@
     "media": [
       "interim.png",
       "dream6.png",
-      "video:https://www.youtube.com/embed/8we3EDxP0gE?enablejsapi=1",
+      "video:8we3EDxP0gE",
       "houseprison.png",
       "cavern.png"
     ],
@@ -185,7 +185,7 @@
     "media": [
       "sequence.jpg",
       {
-        "src": "video:https://www.youtube.com/embed/LEqC9RyPLV0?enablejsapi=1",
+        "src": "video:LEqC9RyPLV0",
         "caption": "Early prototype"
       }
     ],
@@ -198,11 +198,7 @@
     "name": "WebXR Hand Tracking Demo",
     "subtext": "For years I've been fascinated with the VR space, so much so that I pre-ordered the Oculus Quest back when it was first announced. This demo is a small final project I worked on for a Graphics class I took. It's built from scratch with TypeScript and uses WebXR APIs to interface with XR capable devices and Hand Tracking. The demo itself features a couple WebGL experiments, and a fully-functioning piano that you can play with your hands!",
     "tech": ["typescript", "webxr"],
-    "media": [
-      "video:https://www.youtube.com/embed/fEodmbYcrYc?enablejsapi=1",
-      "video:https://www.youtube.com/embed/HP4NSQZV_FA?enablejsapi=1",
-      "video:https://www.youtube.com/embed/Fx9BF3J9ffk?enablejsapi=1"
-    ],
+    "media": ["video:fEodmbYcrYc", "video:HP4NSQZV_FA", "video:Fx9BF3J9ffk"],
     "start": "2022-04-02",
     "end": "2022-05-02",
     "links": [
@@ -226,10 +222,10 @@
     "tech": ["godot"],
     "media": [
       {
-        "src": "video:https://www.youtube.com/embed/6iUE8Adpo78?enablejsapi=1",
+        "src": "video:6iUE8Adpo78",
         "caption": "Made this in a couple hours :D"
       },
-      "video:https://www.youtube.com/embed/JSNHY7wqvLw?enablejsapi=1"
+      "video:JSNHY7wqvLw"
     ],
     "start": "2022-11-18",
     "end": "2022-12-07",
@@ -267,7 +263,7 @@
     ],
     "media": [
       {
-        "src": "video:https://www.youtube.com/embed/m6q4NDJckmk?enablejsapi=1",
+        "src": "video:m6q4NDJckmk",
         "caption": "A demo of the application's earliest version"
       }
     ],
@@ -341,7 +337,7 @@
     "tech": ["cpp", "c", "java"],
     "media": [
       {
-        "src": "video:https://www.youtube.com/embed/muhu8e207u4?enablejsapi=1",
+        "src": "video:muhu8e207u4",
         "caption": "OS Desktop & Doom Demo Video (QEMU)"
       }
     ],

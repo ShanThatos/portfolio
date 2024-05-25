@@ -14,10 +14,9 @@
   "dependencies": {
     "html-react-parser": "^4.2.2",
     "medium-zoom": "^1.0.8",
-    "nightwind": "^1.1.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
+    "react-lite-youtube-embed": "^2.4.0",
     "react-particles": "^2.12.2",
     "swiper": "^10.2.0",
     "tsparticles-preset-stars": "^2.12.0",

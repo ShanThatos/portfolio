@@ -1,5 +1,3 @@
-import nightwind from "nightwind"
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -9,8 +7,6 @@ export default {
       inherit: "inherit",
       transparent: "transparent",
       current: "currentColor",
-      permawhite: "#ffffff",
-      permablack: "#000000",
       black: "#000000",
       white: "#ffffff",
       background: {
@@ -62,14 +58,10 @@ export default {
         950: "#431E1E",
       },
     },
-    nightwind: {
-      colors: {},
-    },
     fontFamily: {
       display: "Acme, sans-serif",
       body: "Nunito, sans-serif",
     },
     extend: {},
-  },
-  plugins: [nightwind],
+  }
 }

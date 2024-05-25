@@ -65,12 +65,12 @@ function ProjectCard({ project }: { project: string }) {
     <div id={project} className="" key={project}>
       <div className="px-5">
         <div className="flex flex-row flex-wrap justify-between mb-1">
-          <h2 className="mb-0 dark:text-secondary">{data.name}</h2>
-          <h2 className="mb-0 dark:text-secondary">{displayDate}</h2>
+          <h3 className="mb-0 text-secondary">{data.name}</h3>
+          <h3 className="mb-0 text-secondary">{displayDate}</h3>
         </div>
         {data.subtext && <ProjectDescription text={data.subtext} />}
         {data.tech && (
-          <div className="flex flex-row justify-start items-center flex-wrap mb-3 px-2 gap-3">
+          <div className="flex flex-row justify-start items-center flex-wrap mb-3 md:px-2 gap-1 md:gap-3">
             {data.tech.map((t) => (
               <TechIcon key={t} name={t} />
             ))}
@@ -78,7 +78,7 @@ function ProjectCard({ project }: { project: string }) {
         )}
       </div>
       {data.media && (
-        <div className="w-full aspect-video bg-white rounded-lg p-3 mb-3">
+        <div className="w-full aspect-video bg-black rounded-lg p-3 mb-3">
           <SwiperComponent
             className="w-full h-full"
             modules={[Navigation, Pagination, A11y]}
@@ -93,9 +93,7 @@ function ProjectCard({ project }: { project: string }) {
                 <MediaSlide
                   project={project}
                   media={media}
-                  ref={(el: any) => {
-                    if (el) videoEmbeds.current.set(index, el)
-                  }}
+                  onIframeLoad={(el) => videoEmbeds.current.set(index, el)}
                 />
               </SwiperSlide>
             ))}
@@ -103,7 +101,7 @@ function ProjectCard({ project }: { project: string }) {
         </div>
       )}
       {data.links && (
-        <div className="flex flex-row flex-wrap justify-center items-center gap-5 px-7">
+        <div className="flex flex-row flex-wrap justify-center items-center gap-3 md:gap-5 px-2 md:px-7">
           {data.links.map((link, index) => (
             <ExternalLinkButton
               key={`link-${link.url}-${index}`}

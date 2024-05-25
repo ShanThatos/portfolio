@@ -1,6 +1,5 @@
 import mediumZoom, { Zoom, ZoomOptions } from "medium-zoom"
 import { ComponentProps, useEffect, useRef } from "react"
-import { useTheme } from "../hooks/NightwindHooks"
 
 type ImageZoomProps = ComponentProps<"img"> & {
   options?: ZoomOptions
@@ -8,15 +7,14 @@ type ImageZoomProps = ComponentProps<"img"> & {
 
 export function ImageZoom({ options, ...props }: ImageZoomProps) {
   const zoomRef = useRef<Zoom | null>(null)
-  const theme = useTheme()
 
   useEffect(() => {
     if (zoomRef.current === null) return
     let options = zoomRef.current.getOptions()
     if (options === undefined) options = {}
-    options.background = theme === "dark" ? "#091725" : "#FCEFE2"
+    options.background = "#091725"
     zoomRef.current.update(options)
-  }, [theme])
+  }, [])
 
   function getZoom() {
     if (zoomRef.current === null) {

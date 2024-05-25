@@ -1,187 +1,150 @@
 {
   "arvr": {
     "name": "AR/VR",
-    "icon": "arvr.png",
-    "url": ""
+    "icon": "arvr.png"
   },
   "backend": {
     "name": "Backend",
-    "icon": "backend.png",
-    "url": ""
+    "icon": "backend.png"
   },
   "brainfuck": {
     "name": "Brainf**k",
-    "icon": "brainfuck.svg",
-    "url": "https://esolangs.org/wiki/Brainfuck"
+    "icon": "brainfuck.svg"
   },
   "c": {
     "name": "C",
-    "icon": "c.svg",
-    "url": "https://en.wikipedia.org/wiki/C_(programming_language)"
+    "icon": "c.svg"
   },
   "cpp": {
     "name": "C++",
-    "icon": "cpp.svg",
-    "url": "https://isocpp.org"
+    "icon": "cpp.svg"
   },
   "csharp": {
     "name": "CSharp",
-    "icon": "csharp.svg",
-    "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"
+    "icon": "csharp.svg"
   },
   "css": {
     "name": "CSS",
-    "icon": "css.svg",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    "icon": "css.svg"
   },
   "fastapi": {
     "name": "FastAPI",
-    "icon": "fastapi.png",
-    "url": "https://fastapi.tiangolo.com"
+    "icon": "fastapi.png"
   },
   "flask": {
     "name": "Flask",
-    "icon": "flask.png",
-    "url": "https://flask.palletsprojects.com/"
+    "icon": "flask.png"
   },
   "frontend": {
     "name": "Frontend",
-    "icon": "frontend.png",
-    "url": ""
+    "icon": "frontend.png"
   },
   "fullstack": {
     "name": "Fullstack",
-    "icon": "fullstack.png",
-    "url": ""
+    "icon": "fullstack.png"
   },
   "gamedev": {
     "name": "Game Dev",
-    "icon": "gamedev.png",
-    "url": ""
+    "icon": "gamedev.png"
   },
   "godot": {
     "name": "Godot",
-    "icon": "godot.svg",
-    "url": "https://godotengine.org"
+    "icon": "godot.svg"
   },
   "html": {
     "name": "HTML",
-    "icon": "html.svg",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    "icon": "html.svg"
   },
   "htmx": {
     "name": "htmx",
-    "icon": "htmx.png",
-    "url": "https://htmx.org/"
+    "icon": "htmx.png"
   },
   "java": {
     "name": "Java",
-    "icon": "java.svg",
-    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+    "icon": "java.svg"
   },
   "javascript": {
     "name": "JavaScript",
-    "icon": "javascript.svg",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    "icon": "javascript.svg"
   },
   "jinja": {
     "name": "Jinja",
-    "icon": "jinja.png",
-    "url": "https://jinja.palletsprojects.com/en/3.1.x/"
+    "icon": "jinja.png"
   },
   "jquery": {
     "name": "jQuery",
-    "icon": "jquery.png",
-    "url": "https://jquery.com/"
+    "icon": "jquery.png"
   },
   "katex": {
     "name": "KaTeX",
-    "icon": "tex.svg",
-    "url": "https://katex.org"
+    "icon": "tex.svg"
   },
   "mathjax": {
     "name": "MathJax",
-    "icon": "tex.svg",
-    "url": "https://www.mathjax.org/"
+    "icon": "tex.svg"
   },
   "poetry": {
     "name": "Poetry",
-    "icon": "poetry.svg",
-    "url": "https://python-poetry.org/"
+    "icon": "poetry.svg"
   },
   "postgresql": {
     "name": "PostgreSQL",
-    "icon": "postgresql.svg",
-    "url": "https://www.postgresql.org/"
+    "icon": "postgresql.svg"
   },
   "python": {
     "name": "Python",
-    "icon": "python.svg",
-    "url": "https://www.python.org/"
+    "icon": "python.svg"
   },
   "react": {
     "name": "React",
-    "icon": "react_ts.svg",
-    "url": "https://react.dev"
+    "icon": "react_ts.svg"
   },
   "reactnative": {
     "name": "React Native",
-    "icon": "reactnative.png",
-    "url": "https://reactnative.dev"
+    "icon": "reactnative.png"
   },
   "sass": {
     "name": "Sass",
-    "icon": "sass.svg",
-    "url": "https://sass-lang.com/"
+    "icon": "sass.svg"
   },
   "sheetsapi": {
     "name": "Google Sheets API",
-    "icon": "sheets.png",
-    "url": "https://developers.google.com/sheets/api"
+    "icon": "sheets.png"
   },
   "solidjs": {
     "name": "Solid.js",
-    "icon": "solidjs.png",
-    "url": "https://www.solidjs.com/"
+    "icon": "solidjs.png"
   },
   "sql": {
     "name": "SQL",
-    "icon": "database.svg",
-    "url": ""
+    "icon": "database.svg"
   },
   "sqlalchemy": {
     "name": "SQLAlchemy (ORM)",
-    "icon": "sqlalchemy.png",
-    "url": "https://www.sqlalchemy.org/"
+    "icon": "sqlalchemy.png"
   },
   "stripe": {
     "name": "Stripe",
-    "icon": "stripe.png",
-    "url": "https://stripe.com/"
+    "icon": "stripe.png"
   },
   "tailwind": {
     "name": "Tailwind CSS",
-    "icon": "tailwindcss.svg",
-    "url": "https://tailwindcss.com/"
+    "icon": "tailwindcss.svg"
   },
   "typescript": {
     "name": "TypeScript",
-    "icon": "typescript.svg",
-    "url": "https://www.typescriptlang.org"
+    "icon": "typescript.svg"
   },
   "unity": {
     "name": "Unity",
-    "icon": "unity.png",
-    "url": "https://unity.com"
+    "icon": "unity.png"
   },
   "vite": {
     "name": "Vite",
-    "icon": "vite.svg",
-    "url": "https://vitejs.dev/"
+    "icon": "vite.svg"
   },
   "webxr": {
     "name": "WebXR",
-    "icon": "webxr.png",
-    "url": "https://immersiveweb.dev"
+    "icon": "webxr.png"
   }
 }

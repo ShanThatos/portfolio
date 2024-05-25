@@ -21,7 +21,7 @@ function ProjectDescription({ text }: { text: string }) {
   }, [])
 
   return (
-    <div className="mb-3 text-xl">
+    <div className="mb-3 lg:text-xl">
       <p
         ref={textTag}
         className={
