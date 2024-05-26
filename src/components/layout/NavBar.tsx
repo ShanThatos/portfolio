@@ -59,7 +59,7 @@ const NavBar = () => {
   return (
     <div className="sticky top-0 bg-background-800 z-50 shadow border-b-2 border-background-900 font-display">
       <div className="max-w-6xl mx-auto">
-        <nav className="h-12 hidden md:flex items-center text-xl">
+        <nav className="h-12 hidden md:flex items-center text-xl px-5">
           <NavHashLink to="/#portfolio-page" className="mr-auto hover:opacity-60 active:opacity-40">
             {title}
           </NavHashLink>
