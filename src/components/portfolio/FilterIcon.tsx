@@ -1,4 +1,4 @@
-import TECHS from "../assets/techicons.json"
+import TECHS from "../../assets/techicons.json"
 
 interface FilterIconProps {
   name: string

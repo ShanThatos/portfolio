@@ -1,4 +1,4 @@
-import TECHS from "../assets/techicons.json"
+import TECHS from "../../assets/techicons.json"
 
 function TechIcon({ name }: { name: string }) {
   if (!(name in TECHS)) return <></>

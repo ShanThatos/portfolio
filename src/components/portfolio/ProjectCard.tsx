@@ -5,7 +5,7 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { A11y, Navigation, Pagination } from "swiper/modules"
 import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react"
-import PROJECTS from "../assets/projects.json"
+import PROJECTS from "../../assets/projects.json"
 import ExternalLinkButton from "./ExternalLinkButton"
 import MediaSlide from "./MediaSlide"
 import ProjectDescription from "./ProjectDescription"
@@ -62,7 +62,7 @@ function ProjectCard({ project }: { project: string }) {
   )
 
   return (
-    <div id={project} className="" key={project}>
+    <div id={project} className="scroll-m-10" key={project}>
       <div className="px-5">
         <div className="flex flex-row flex-wrap justify-between mb-1">
           <h3 className="mb-0 text-secondary">{data.name}</h3>

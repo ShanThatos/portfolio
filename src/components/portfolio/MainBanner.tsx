@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect"
-import mainPhotoUrl from "../assets/yee.png"
+import mainPhotoUrl from "../../assets/yee.png"
 import ParticlesBackground from "./ParticlesBackground"
 
 function MainBanner() {
@@ -16,7 +16,7 @@ function MainBanner() {
       >
         <div className="grow grid grid-cols-1 lg:grid-cols-2 gap-x-20">
           <div className="grid place-items-center">
-            <div className="w-[23rem]">
+            <div className="break-all">
               <h1 className="text-4xl md:text-6xl">Hey there!</h1>
               <h1 className="text-3xl md:text-5xl">
                 {"I'm "}
@@ -44,7 +44,7 @@ function MainBanner() {
           </div>
           <div className="grid place-items-center px-5">
             <img
-              className="lg:w-[40vh] rounded-3xl border-8 border-[#101930]"
+              className="max-h-[40vh] lg:w-[40vh] rounded-3xl border-8 border-[#101930]"
               src={mainPhotoUrl}
               alt="yay"
             />

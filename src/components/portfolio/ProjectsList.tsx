@@ -1,6 +1,6 @@
 import { useMemo } from "react"
-import PROJECTS from "../assets/projects.json"
-import { Project, SortKey, SortOrder } from "../types/projecttypes"
+import PROJECTS from "../../assets/projects.json"
+import { Project, SortKey, SortOrder } from "../../types/projecttypes"
 import ProjectCard from "./ProjectCard"
 
 interface ProjectsListProps {

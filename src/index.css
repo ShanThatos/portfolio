@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-body text-white bg-background-900 min-h-screen;
+    @apply font-body text-white bg-background-900 min-h-screen w-screen;
   }
 
   h1,
