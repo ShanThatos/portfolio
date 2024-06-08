@@ -4,6 +4,7 @@ import { BlogType } from "../types/blogtypes"
 import { lazy, useEffect, useState } from "react"
 import { ImageZoom } from "../components/common/ImageZoom"
 import { toDateDisplay } from "../utils"
+import { Helmet } from "react-helmet-async"
 
 const Markdown = lazy(() => import("../components/common/Markdown"))
 
@@ -32,6 +33,10 @@ const BlogEntryPage = () => {
 
   return (
     <div id="blog-top" className="max-w-5xl mx-auto py-5 px-2 md:p-10 scroll-m-20">
+      <Helmet>
+        <title>{blog.title} | shanthatos.dev</title>
+        <meta name="description" content={blog.description} />
+      </Helmet>
       <div className="px-10 pb-5 md:pb-10">
         <ImageZoom src={`/blogs/${blog.id}/thumbnail.png`} className="mx-auto max-h-[600px] aspect-square" />
       </div>
