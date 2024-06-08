@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import PROJECTS from "../../assets/projects.json"
+import PROJECTS from "../../assets/portfolio/projects.json"
 import { Project, SortKey, SortOrder } from "../../types/projecttypes"
 import ProjectCard from "./ProjectCard"
 
@@ -10,7 +10,7 @@ interface ProjectsListProps {
 }
 
 function filterSort(key: SortKey, order: SortOrder, filters: string[]) {
-  const projects = [...PROJECTS] satisfies Project[]
+  const projects = PROJECTS satisfies Project[]
 
   const results = projects
     .filter((p) => {

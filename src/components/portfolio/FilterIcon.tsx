@@ -57,7 +57,7 @@ export default function FilterIcon({
             </svg>
           </span>
         )}
-        <img src={`/icons/${icon}`} className="w-4 h-4 md:w-8 md:h-8" />
+        <img loading="lazy" src={`/icons/${icon}`} className="w-4 h-4 md:w-8 md:h-8" />
         <span className="text-sm md:text-base">{techName}</span>
       </div>
     </button>

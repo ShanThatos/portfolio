@@ -1,4 +1,4 @@
-import { ImageZoom } from "./ImageZoom"
+import { ImageZoom } from "../common/ImageZoom"
 import MediaSlideVideo from "./MediaSlideVideo"
 
 const MediaSlide = function MediaSlide(
@@ -34,10 +34,11 @@ const MediaSlide = function MediaSlide(
         </div>
       )}
       {media.startsWith("video:") ? (
-        <MediaSlideVideo videoId={media.slice(6)} onIframeLoad={onIframeLoad}/>
+        <MediaSlideVideo videoId={media.slice(6)} onIframeLoad={onIframeLoad} />
       ) : (
         <ImageZoom
-          src={`/projects/${project}/${media}`}
+          loading="lazy"
+          src={`/portfolio/projects/${project}/${media}`}
           className="h-full object-contain mx-auto rounded-lg overflow-hidden"
         />
       )}

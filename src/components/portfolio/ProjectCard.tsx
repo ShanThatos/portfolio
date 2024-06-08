@@ -5,32 +5,13 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { A11y, Navigation, Pagination } from "swiper/modules"
 import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react"
-import PROJECTS from "../../assets/projects.json"
+import PROJECTS from "../../assets/portfolio/projects.json"
 import ExternalLinkButton from "./ExternalLinkButton"
 import MediaSlide from "./MediaSlide"
 import ProjectDescription from "./ProjectDescription"
 import TechIcon from "./TechIcon"
+import { toDateDisplay } from "../../utils"
 
-const MONTHS = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-]
-
-const toDateDisplay = (date: string) => {
-  if (date === "present") return "Present"
-  const d = new Date(date)
-  return `${MONTHS[d.getMonth()]} ${d.getFullYear()}`
-}
 
 function ProjectCard({ project }: { project: string }) {
   const videoEmbeds = useRef(new Map<number, HTMLElement>())
@@ -65,8 +46,8 @@ function ProjectCard({ project }: { project: string }) {
     <div id={project} className="scroll-m-10" key={project}>
       <div className="px-5">
         <div className="flex flex-row flex-wrap justify-between mb-1">
-          <h3 className="mb-0 text-secondary">{data.name}</h3>
-          <h3 className="mb-0 text-secondary">{displayDate}</h3>
+          <h2 className="mb-0 text-secondary">{data.name}</h2>
+          <h2 className="mb-0 text-secondary">{displayDate}</h2>
         </div>
         {data.subtext && <ProjectDescription text={data.subtext} />}
         {data.tech && (

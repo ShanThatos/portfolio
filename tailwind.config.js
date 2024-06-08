@@ -1,6 +1,7 @@
+import typography from "@tailwindcss/typography"
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./public/blogs/**/*.md"],
   darkMode: "class",
   theme: {
     colors: {
@@ -63,5 +64,6 @@ export default {
       body: "Nunito, sans-serif",
     },
     extend: {},
-  }
+  },
+  plugins: [typography]
 }

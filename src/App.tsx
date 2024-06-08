@@ -1,17 +1,27 @@
-import { HashRouter, Navigate, Route, Routes } from "react-router-dom"
-import PortfolioPage from "./pages/PortfolioPage"
-import NavBar from "./components/layout/NavBar"
+import { lazy } from "react"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+import RootLayout from "./components/layout/RootLayout"
 
+const PortfolioPage = lazy(() => import("./pages/PortfolioPage"))
+const BlogListPage = lazy(() => import("./pages/BlogListPage"))
+const BlogEntryPage = lazy(() => import("./pages/BlogEntryPage"))
 
 function App() {
+  if (!window.location.pathname.startsWith("/_/")) {
+    window.location.pathname = "/_" + window.location.pathname
+  }
+
   return (
-    <HashRouter>
-      <NavBar />
+    <BrowserRouter basename="/_/">
       <Routes>
-        <Route path="/" element={<PortfolioPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route element={<RootLayout />}>
+          <Route index element={<PortfolioPage />} />
+          <Route path="blogs" element={<BlogListPage />} />
+          <Route path="blogs/:id" element={<BlogEntryPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

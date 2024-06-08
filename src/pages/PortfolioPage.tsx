@@ -5,7 +5,9 @@ import FilterIcon from "../components/portfolio/FilterIcon"
 import Footer from "../components/portfolio/Footer"
 import ProjectsList from "../components/portfolio/ProjectsList"
 import { SortKey, SortOrder } from "../types/projecttypes"
-import useScrollToHash from "../hooks/use-scroll-to-hash"
+
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
+import "../assets/portfolio/index.css"
 
 const PROJECT_TAGS = [
   ["python", "typescript", "javascript", "java", "csharp"],
@@ -20,7 +22,6 @@ const SORT_KEY_NAMES = new Map<SortKey, string>([
 ])
 
 function PortfolioPage() {
-  useScrollToHash()
   const [sortKey, setSortKey] = useState<SortKey>("end")
   const [sortOrder, setSortOrder] = useState<SortOrder>("desc")
   const [filters, setFilters] = useState<string[]>([])
@@ -31,7 +32,7 @@ function PortfolioPage() {
 
 
   return (
-    <div id="portfolio-page" className="scroll-m-[100px]">
+    <div className="scroll-m-[100px]">
       <MainBanner />
       <div className="max-w-5xl p-4 md:px-10 mx-auto">
         <h2 id="myprojects" className="mt-5 mb-5 text-center text-secondary-200 scroll-m-[80px]">

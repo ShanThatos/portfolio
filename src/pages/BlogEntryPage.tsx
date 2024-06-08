@@ -1,0 +1,69 @@
+import { useParams } from "react-router-dom"
+import BLOGS from "../assets/blogs/blogs.json"
+import { BlogType } from "../types/blogtypes"
+import { lazy, useEffect, useState } from "react"
+import { ImageZoom } from "../components/common/ImageZoom"
+import { toDateDisplay } from "../utils"
+
+const Markdown = lazy(() => import("../components/common/Markdown"))
+
+const BlogEntryPage = () => {
+  const { id } = useParams()
+  const [content, setContent] = useState<string>("")
+
+  const blog: BlogType | undefined = BLOGS.find((b) => b.id === id)
+  if (!blog) throw new Error(`Blog ${id} not found`)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetch(`/blogs/${id}/index.md`)
+        .then((res) => res.text())
+        .then(setContent)
+
+      if (import.meta.env.PROD) {
+        clearInterval(interval)
+      }
+    }, 1000)
+    return () => {
+      setContent("")
+      clearInterval(interval)
+    }
+  }, [id])
+
+  return (
+    <div id="blog-top" className="max-w-5xl mx-auto py-5 px-2 md:p-10 scroll-m-20">
+      <div className="px-10 pb-5 md:pb-10">
+        <ImageZoom src={`/blogs/${blog.id}/thumbnail.png`} className="mx-auto max-h-[600px] aspect-square" />
+      </div>
+      <h1 className="text-xl md:text-4xl mb-0 md:mb-2 text-center text-secondary-500">{blog.title}</h1>
+      <h2 className="text-lg md:text-xl mb-2 text-center opacity-70">Posted {toDateDisplay(blog.date)}</h2>
+      <div className="h-1 bg-white rounded opacity-50 mb-8"></div>
+      <div className="px-5 text-[16px]">
+        {content ? (
+          <Markdown content={content} srcPath={`/blogs/${blog.id}/`} />
+        ) : (
+          <div className="prose prose-invert mx-auto">
+            <div className="animate-pulse flex flex-col items-stretch">
+              <div className="bg-[#ffffff33] w-[200px] h-[24px] rounded-lg mb-3" />
+              <div className="mb-6" />
+
+              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3 mr-16" />
+              <div className="mb-4" />
+
+              <div className="bg-[#ffffff33] w-[300px] h-[200px] rounded-lg mb-3 mx-auto" />
+              <div className="mb-4" />
+
+              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3 mr-16" />
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+export default BlogEntryPage

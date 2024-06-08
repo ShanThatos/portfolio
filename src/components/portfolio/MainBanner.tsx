@@ -16,7 +16,7 @@ function MainBanner() {
       >
         <div className="grow grid grid-cols-1 lg:grid-cols-2 gap-x-20">
           <div className="grid place-items-center">
-            <div className="break-all">
+            <div className="pr-8">
               <h1 className="text-4xl md:text-6xl">Hey there!</h1>
               <h1 className="text-3xl md:text-5xl">
                 {"I'm "}
@@ -24,7 +24,7 @@ function MainBanner() {
                   Shanth Koka
                 </span>
               </h1>
-              <h1 className="text-3xl md:text-5xl text-accent-200">
+              <h1 className="text-3xl md:text-5xl text-accent-200 w-0 whitespace-nowrap break-normal overflow-visible">
                 <Typewriter
                   options={{
                     strings: [

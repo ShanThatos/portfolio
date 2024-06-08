@@ -1,6 +1,5 @@
 import { MouseEvent, useEffect, useRef, useState } from "react"
-import { NavHashLink } from "react-router-hash-link"
-
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -11,20 +10,21 @@ const NavBar = () => {
   )
 
   const links = [
-    { to: "/#myprojects", text: "Portfolio" },
-    // { to: "/blog", text: "Blog" },
+    { to: "/?scrollTo=myprojects", text: "Portfolio" },
+    { to: "/blogs?scrollTo=top", text: "Blog" },
   ]
 
   const openDrawer = () => {
     const scrollY = document.documentElement.style.getPropertyValue("--scroll-y")
     const scrollElement = document.scrollingElement
     if (scrollElement && scrollElement instanceof HTMLElement) {
-      console.log(scrollElement)
       scrollElement.style.position = "fixed"
       scrollElement.style.top = `-${scrollY}`
     }
-    if (drawerRef.current) drawerRef.current.focus()
     setIsDrawerOpen(true)
+    if (drawerRef.current) {
+      setTimeout(() => drawerRef.current?.focus(), 0)
+    }
   }
 
   const closeDrawer = (event?: MouseEvent) => {
@@ -57,16 +57,16 @@ const NavBar = () => {
 
 
   return (
-    <div className="sticky top-0 bg-background-800 z-50 shadow border-b-2 border-background-900 font-display">
+    <div className="sticky top-[-1px] bg-background-800 z-50 shadow border-b-2 border-background-900 font-display">
       <div className="max-w-6xl mx-auto">
         <nav className="h-12 hidden md:flex items-center text-xl px-5">
-          <NavHashLink to="/#portfolio-page" className="mr-auto hover:opacity-60 active:opacity-40">
+          <Link to="/?scrollTo=top" className="mr-auto hover:opacity-60 active:opacity-40">
             {title}
-          </NavHashLink>
+          </Link>
           {links.map((link, index) => (
-            <NavHashLink key={link.to} to={link.to} className={`h-full ${index === 0 ? "border-l-2" : ""} border-r-2 border-background-900 flex items-center px-3 hover:opacity-60 active:opacity-40`}>
+            <Link key={link.to} to={link.to} className={`w-32 h-full ${index === 0 ? "border-l-2" : ""} border-r-2 border-[#00000044] flex justify-center items-center px-3 hover:opacity-60 active:opacity-40`}>
               {link.text}
-            </NavHashLink>
+            </Link>
           ))}
         </nav>
 
@@ -88,7 +88,7 @@ const NavBar = () => {
                 onKeyDown={(event) => {
                   if (event.key === "Escape") setIsDrawerOpen(false)
                 }}
-                tabIndex={0}
+                tabIndex={isDrawerOpen ? 0 : undefined}
                 ref={drawerRef}
               >
                 <div
@@ -96,16 +96,14 @@ const NavBar = () => {
                   onClick={(event) => event.stopPropagation()}
                 >
                   {links.map((link) => (
-                    <NavHashLink key={link.to} to={link.to} className="py-3 px-4 bg-background-800 rounded active:opacity-40"
-                      scroll={(el) => {
-                        closeDrawer()
-                        setTimeout(() => {
-                          el.scrollIntoView({ behavior: "smooth" })
-                        }, 100)
-                      }}
+                    <Link
+                      key={link.to}
+                      to={link.to}
+                      className="py-3 px-4 bg-background-800 rounded active:opacity-40"
+                      onClick={closeDrawer}
                     >
                       {link.text}
-                    </NavHashLink>
+                    </Link>
                   ))}
                   <button className="py-3 px-4 bg-background-800 rounded text-left active:opacity-70" onClick={closeDrawer}>Close</button>
                 </div>
