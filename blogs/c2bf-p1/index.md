@@ -2,7 +2,7 @@ A couple of years ago, during a Computer Architecture course, I had four weeks t
 
 That idea didn't last very long -- I had zero clue where to start, and four weeks was definitely not enough time to figure it out. This project has plagued my shower thoughts for four years but I finally have something to show for it. 
 
-If you're not familiar with BF, go watch <a href="https://www.youtube.com/watch?v=hdHjjBS4cs8" target="_blank">this video</a>.
+If you're not familiar with BF, go watch [this video](https://www.youtube.com/watch?v=hdHjjBS4cs8).
 
 ## A little taste of what's to come
 ```javascript
