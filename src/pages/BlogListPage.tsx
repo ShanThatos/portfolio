@@ -3,13 +3,17 @@ import BLOGS from "../assets/blogs/blogs.json"
 import { ImageZoom } from "../components/common/ImageZoom"
 import { BlogType } from "../types/blogtypes"
 import { toDateDisplay } from "../utils"
+import { Helmet } from "react-helmet-async"
 
 
 const BlogListPage = () => {
   const blogs = BLOGS satisfies BlogType[]
 
   return (
-    <div id="blog-top" className="max-w-4xl mx-auto p-5 md:p-10 flex flex-col items-stretch gap-y-10 scroll-m-20">
+    <div className="max-w-4xl mx-auto p-5 md:p-10 flex flex-col items-stretch gap-y-10 scroll-m-20">
+      <Helmet>
+        <link rel="canonical" href="https://shanthatos.dev/_/blogs" />
+      </Helmet>
       <div className="md:px-5">
         <div className="bg-background-50 text-black md:p-2 text-center font-body text-xs md:text-2xl">
           <div>Rest up traveler, you have much more scrolling to do</div>

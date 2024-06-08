@@ -32,10 +32,11 @@ const BlogEntryPage = () => {
   }, [id])
 
   return (
-    <div id="blog-top" className="max-w-5xl mx-auto py-5 px-2 md:p-10 scroll-m-20">
+    <div className="max-w-5xl mx-auto py-5 px-2 md:p-10 scroll-m-20">
       <Helmet>
         <title>{blog.title} | shanthatos.dev</title>
         <meta name="description" content={blog.description} />
+        <link rel="canonical" href={`https://shanthatos.dev/_/blogs/${blog.id}`} />
       </Helmet>
       <div className="px-10 pb-5 md:pb-10">
         <ImageZoom src={`/blogs/${blog.id}/thumbnail.png`} className="mx-auto max-h-[600px] aspect-square" />

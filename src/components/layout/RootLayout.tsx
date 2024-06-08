@@ -13,11 +13,12 @@ const RootLayout = () => {
   return (
     <HelmetProvider>
       <Helmet>
+        <title>Shanth Koka Portfolio | shanthatos.dev</title>
         <meta
           name="description"
           content="Come check out my portfolio and see what I've been up to!"
         />
-        <title>Shanth Koka Portfolio | shanthatos.dev</title>
+        <link rel="canonical" href="https://shanthatos.dev" />
       </Helmet>
       <NavBar />
       <Suspense fallback={<></>}>
