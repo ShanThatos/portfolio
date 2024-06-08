@@ -9,7 +9,7 @@ export default function useScrollTo() {
     if (!id) return
 
     searchParams.delete("scrollTo")
-    setSearchParams(searchParams)
+    setSearchParams(searchParams, { replace: true })
 
     const element = document.getElementById(id)
     if (element) {
