@@ -1,1 +1,0 @@
-import e from"./csharp-6de4f0c9.js";import p from"./t4-templating-ef79f002.js";import"./Markdown-957a1ad0.js";import"./index-00606307.js";import"./date-display-75f041d5.js";a.displayName="t4-cs";a.aliases=["t4"];function a(t){t.register(e),t.register(p),t.languages.t4=t.languages["t4-cs"]=t.languages["t4-templating"].createT4("csharp")}export{a as default};
