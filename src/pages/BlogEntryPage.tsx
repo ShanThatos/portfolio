@@ -8,12 +8,10 @@ import { Helmet } from "react-helmet-async"
 
 const Markdown = lazy(() => import("../components/common/Markdown"))
 
-const BlogEntryPage = () => {
+const BlogEntryContent = () => {
   const { id } = useParams()
-  const [content, setContent] = useState<string>("")
 
-  const blog: BlogType | undefined = BLOGS.find((b) => b.id === id)
-  if (!blog) throw new Error(`Blog ${id} not found`)
+  const [content, setContent] = useState<string>("")
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,6 +29,39 @@ const BlogEntryPage = () => {
     }
   }, [id])
 
+  return (content ? (
+    <>
+      <Markdown content={content} srcPath={`/blogs/${id}/`} />
+      <div className="h-40" />
+    </>
+  ) : (
+    <div className="prose prose-invert mx-auto">
+      <div className="animate-pulse flex flex-col items-stretch">
+        <div className="bg-[#ffffff33] w-[200px] h-[24px] rounded-lg mb-3" />
+        <div className="mb-6" />
+
+        <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+        <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+        <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3 mr-16" />
+        <div className="mb-4" />
+
+        <div className="bg-[#ffffff33] w-[300px] h-[200px] rounded-lg mb-3 mx-auto" />
+        <div className="mb-4" />
+
+        <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+        <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
+        <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3 mr-16" />
+      </div>
+    </div>
+  ))
+}
+
+const BlogEntryPage = () => {
+  const { id } = useParams()
+
+  const blog: BlogType | undefined = BLOGS.find((b) => b.id === id)
+  if (!blog) throw new Error(`Blog ${id} not found`)
+
   return (
     <div className="max-w-5xl mx-auto py-5 px-2 md:p-10 scroll-m-20">
       <Helmet>
@@ -45,28 +76,7 @@ const BlogEntryPage = () => {
       <h2 className="text-lg md:text-xl mb-2 text-center opacity-70">Posted {toDateDisplay(blog.date)}</h2>
       <div className="h-1 bg-white rounded opacity-50 mb-8"></div>
       <div className="px-5 text-[16px]">
-        {content ? (
-          <Markdown content={content} srcPath={`/blogs/${blog.id}/`} />
-        ) : (
-          <div className="prose prose-invert mx-auto">
-            <div className="animate-pulse flex flex-col items-stretch">
-              <div className="bg-[#ffffff33] w-[200px] h-[24px] rounded-lg mb-3" />
-              <div className="mb-6" />
-
-              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
-              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
-              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3 mr-16" />
-              <div className="mb-4" />
-
-              <div className="bg-[#ffffff33] w-[300px] h-[200px] rounded-lg mb-3 mx-auto" />
-              <div className="mb-4" />
-
-              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
-              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3" />
-              <div className="bg-[#ffffff33] h-[14px] rounded-lg mb-3 mr-16" />
-            </div>
-          </div>
-        )}
+        <BlogEntryContent />
       </div>
     </div>
   )

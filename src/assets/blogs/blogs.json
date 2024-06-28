@@ -7,7 +7,7 @@
   },
   {
     "id": "c2bf-p1",
-    "title": "Compiling Pythonic to Brainf**k (Part 1) [WIP]",
+    "title": "Compiling Pythonic to Brainf**k (Part 1)",
     "date": "2024-05-26",
     "description": "Worked on this project on and off for about a year. It's a zero-bs high-level language → BF compiler. Come check it out! You might learn a thing or two about cpu's, memory management, compilers, and BF (obviously)."
   }

@@ -41,7 +41,6 @@ const Markdown = ({ content, srcPath }: { content: string, srcPath: string }) =>
         a: (props) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { ref, node, href, target, ...rest } = props
-          // return <a href={`/_/${href}`} {...rest} />
           if (href === undefined) {
             return <span>Anchor elements must have an href D:</span>
           }

@@ -7,12 +7,12 @@ If you're not familiar with BF, go watch [this video](https://www.youtube.com/wa
 ## A little taste of what's to come
 ```javascript
 import "io/input"
-print("Hello fibonacci!")
+println("Hello fibonacci!")
 stop = readint()
 a = 1
 b = 1
 while (a < stop) {
-    print(a)
+    print(a, "")
     c = a + b
     a = b
     b = c
@@ -20,16 +20,22 @@ while (a < stop) {
 ```
 
 ```output
-Input: 1000
+Input: 100000000
 Output (shortened):
 -------
 Hello fibonacci!
-1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025 121393 196418 317811 514229 832040 1346269 2178309 3524578 5702887 9227465 14930352 24157817 39088169 63245986 
 -------
-bf code size:   162268
-compile time:   2.195s
-run time:       1.763s
+bf code size:        149639
+parse time:          0.400s
+compile time:        0.783s
+encode time:         0.877s
+bf to c time:        1.011s
+c to bin time:       0.594s
+run time:            2.320s
 ```
+
+[Other Examples (helloworld, lists, primes)](https://github.com/ShanThatos/compile-pythonic-to-bf/tree/main/examples)
 
 ### What's great about this?
 1. This isn't your typical "compile down to BF" project -- it's not a glorified macro tree
@@ -37,7 +43,8 @@ run time:       1.763s
 3. The numbers go above 255 (even though BF only supports 8-bit cells)
 
 ### What's not so great about this?
-1. It's not actually Python, it's my custom high-level language <!-- TODO LINK SPEC -->
+1. It's not actually Python, it's my custom high-level language
+    - Check out the [spec](https://github.com/ShanThatos/compile-pythonic-to-bf/blob/main/spec/main.json). It's split across multiple files, but it's pretty readable.
 2. Slow runtime -- it compiles the final BF to a C-executable but that's still *slow*
 
 ![meme](limited.jpg)
@@ -74,7 +81,7 @@ Let's define an instruction set for our BF CPU. We'll need to be able to do:
 - Input/Output (in, out)
 - Stack push/pop (push, pop)
 
-Whatever operations you might need in a high-level language, you can build them out of these 12 basic 1-2 argument instructions. Subtraction is just a negation and addition. Multiplication is repeated addition and conditions. If statements and loops are just conditional jumps. Eventually, for performance reasons, I ended up with 28 instructions D: <!-- TODO LINK INSTRUCTIONS SPEC -->
+Whatever operations you might need in a high-level language, you can build them out of these 12 basic 1-2 argument instructions. Subtraction is just a negation and addition. Multiplication is repeated addition and conditions. If statements and loops are just conditional jumps. Eventually, for performance reasons, I ended up with 32 instructions D: [instructions spec](https://github.com/ShanThatos/compile-pythonic-to-bf/blob/main/spec/bfasm.json)
 
 #### Memory Layout
 Managing dynamically sized stack memory in BF at first sounds like a nightmare. Fortunately, BF has been around for a while and this problem is somewhat solved. 
@@ -83,7 +90,12 @@ Check out this awesome video about a [tic-tac-toe AI in BF](https://www.youtube.
 
 It's called the "glider" pattern because it keeps moving to the next memory cell until it finds `255`. 
 
-I split up the BF memory into a series of 8-cell blocks that we'll call units. <!-- TODO LINK and explain that it has changed --> In BF, each cell is 1 byte, so each unit is 8 bytes. Here's the layout of a unit: 
+I split up the BF memory into a series of 8-cell blocks that we'll call units. 
+Update: Now it's 9-cell blocks, added another marker cell to denote the current instruction -- but that's just an optimization. 
+
+[Unit Layout Code](https://github.com/ShanThatos/compile-pythonic-to-bf/blob/main/c2bf/compile/mem/units.py#L54)
+
+In BF, each cell is 1 byte, so each unit is 8 bytes. Here's the layout of a unit: 
 ![unit layout](unit-layout.png)
 
 I used the marker cell in combination with the glider `+[->>>>>>>>+]-` pattern to navigate between specially marked units. The flag is used for storing an ASM instruction id. The two empty cells are used for computation. And the last four data cells are enough to store a 32-bit integer. In my code, the unit size is configurable, so theoretically you could go further than 32-bit memory. 
@@ -117,7 +129,7 @@ jp baz
 #### Reading Data From Program Memory
 This is by far the most important part of the BF CPU. For every instruction, we need to **read** the current instruction data from memory, and then **read** the data at the addresses in the instruction. 
 
-In the Computation units block, I dedicated a 'query' unit that is solely responsible for reading/writing data from memory. <!-- TODO LINK query unit here  -->
+In the Computation units block, I dedicated a ['query' unit](https://github.com/ShanThatos/compile-pythonic-to-bf/blob/main/c2bf/compile/mem/workspaces/compute.py#L17) that is solely responsible for reading/writing data from memory.
 
 We'll first focus on marking the addressed unit in the memory. \
 Here's what that would look like (pseudocode BF code):
@@ -164,7 +176,7 @@ The actual BF code would look like this:
 ]<<
 ```
 
-After that, it's pretty straightforward to read the data from the unit. Similar to how you normally copy numbers in BF, just with gliders added! <!-- TODO LINK query unit here  -->
+After that, it's pretty straightforward to read the data from the unit. Similar to how you normally copy numbers in BF, just with gliders added!
 
 ##### That's some ugly BF code
 
@@ -204,7 +216,7 @@ def copy(self, src: memrange, dest: memrange, temp: memrange):
     return code
 ```
 
-<!-- TODO link workspace abstractions -->
+[workspace.py](https://github.com/ShanThatos/compile-pythonic-to-bf/blob/main/c2bf/compile/mem/workspace.py)
 
 With these abstractions, and many many more, writing BF code was a breeze! \
 Here's what my code once looked like for marking/reading a unit in memory:
@@ -405,8 +417,7 @@ def processor():
 
 ### Halfway There!
 
-At this point that's all you need to build a custom Assembly language that can be encoded into BF cells and executed by a BF CPU. Obviously I skipped over a lot of instructions, but I'm sure you get the gist of it. I think the workspace abstractions I built deserve some recognition. Check it out here! <!-- TODO LINK -->
-
+At this point that's all you need to build a custom Assembly language that can be encoded into BF cells and executed by a BF CPU. Obviously I skipped over a lot of instructions, but I'm sure you get the gist of it.
 
 ## Let's recap:
 
@@ -429,7 +440,7 @@ loop_body:
 
 ![asm final encoded example](asm-encoded-final.png)
 
-Here's my code that translates the Assembly into bytes <!-- TODO link encode.py -->
+Here's my code that translates the Assembly into bytes: [encode.py](https://github.com/ShanThatos/compile-pythonic-to-bf/blob/main/c2bf/compile/bfasm/encode.py)
 
 ### 2. Bytes → BF Cells (quite literally building each cell/byte one by one with BF):
 ```python
@@ -470,4 +481,7 @@ And yet, it used to be nearly 10 times that size before I optimized the BF CPU. 
 
 Next, we'll build a high-level language that compiles into this custom Assembly. This post is already long enough, so I'll save that for next time. 
 
-<!-- TODO Link to next post -->
+<div class="px-3 py-2 rounded-lg text-center" style="border: 5px solid #111111; background-color: #38434f;">
+Keep reading in the next post! <br>
+<a href="/blogs/c2bf-p2?scrollTo=top">Compiling Pythonic to Brainf**k (Part 2)</a>
+</div>

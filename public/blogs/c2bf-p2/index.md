@@ -1,6 +1,6 @@
 <div class="px-3 py-2 rounded-lg text-center" style="border: 5px solid #111111; background-color: #38434f;">
 Check out the previous post before reading this! <br>
-<a href="/blogs/c2bf-p1?scrollTo=top">Compiling Python to Brainf**k (kinda)</a>
+<a href="/blogs/c2bf-p1?scrollTo=top">Compiling Python to Brainf**k</a>
 </div>
 
 ### Python-like High-Level Language
