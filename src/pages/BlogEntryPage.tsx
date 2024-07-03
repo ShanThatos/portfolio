@@ -1,12 +1,11 @@
 import { useParams } from "react-router-dom"
 import BLOGS from "../assets/blogs/blogs.json"
 import { BlogType } from "../types/blogtypes"
-import { lazy, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { ImageZoom } from "../components/common/ImageZoom"
 import { toDateDisplay } from "../utils"
 import { Helmet } from "react-helmet-async"
-
-const Markdown = lazy(() => import("../components/common/Markdown"))
+import Markdown from "../components/common/Markdown"
 
 const BlogEntryContent = () => {
   const { id } = useParams()
@@ -14,19 +13,24 @@ const BlogEntryContent = () => {
   const [content, setContent] = useState<string>("")
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      fetch(`/blogs/${id}/index.md`)
-        .then((res) => res.text())
-        .then(setContent)
+    fetch(`/blogs/${id}/index.md`)
+      .then((res) => res.text())
+      .then(setContent)
 
-      if (import.meta.env.PROD) {
-        clearInterval(interval)
-      }
-    }, 1000)
-    return () => {
-      setContent("")
-      clearInterval(interval)
-    }
+
+    // const interval = setInterval(() => {
+    //   fetch(`/blogs/${id}/index.md`)
+    //     .then((res) => res.text())
+    //     .then(setContent)
+
+    //   if (import.meta.env.PROD) {
+    //     clearInterval(interval)
+    //   }
+    // }, 1000)
+    // return () => {
+    //   setContent("")
+    //   clearInterval(interval)
+    // }
   }, [id])
 
   return (content ? (
