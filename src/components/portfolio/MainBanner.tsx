@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect"
-import mainPhotoUrl from "../../assets/yee.png"
+import mainPhotoUrl from "../../assets/p1.png"
 import ParticlesBackground from "./ParticlesBackground"
 
 function MainBanner() {
