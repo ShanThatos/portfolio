@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import RootLayout from "./components/layout/RootLayout"
 
 const PortfolioPage = lazy(() => import("./pages/PortfolioPage"))
+const C2BFDemoPage = lazy(() => import("./pages/C2BFDemoPage"))
 const BlogListPage = lazy(() => import("./pages/BlogListPage"))
 const BlogEntryPage = lazy(() => import("./pages/BlogEntryPage"))
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route element={<RootLayout />}>
           <Route index element={<PortfolioPage />} />
+          <Route path="c2bf" element={<C2BFDemoPage />} />
           <Route path="blogs" element={<BlogListPage />} />
           <Route path="blogs/:id" element={<BlogEntryPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

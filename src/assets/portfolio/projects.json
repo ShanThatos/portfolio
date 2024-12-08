@@ -62,6 +62,11 @@
         "type": "github",
         "url": "https://github.com/ShanThatos/numblitz-app",
         "text": "App Repo"
+      },
+      {
+        "type": "misc",
+        "url": "https://apps.apple.com/us/app/numblitz/id6737863219",
+        "text": "AppStore"
       }
     ],
     "tags": [
@@ -115,7 +120,7 @@
   },
   {
     "id": "c2bf",
-    "name": "Compile High Level to BF (Old Version)",
+    "name": "Compile Pythonic to BF (Old Version)",
     "subtext": "An exploration of the Turing Completeness of brainf**k. I built a compiler that transforms a custom made high level language to BF. The language itself reads like a mix of C and Python. Internally, the language is first compiled down to a custom assembly language, and then compiled to BF.",
     "tech": ["python", "brainfuck"],
     "media": [
@@ -129,12 +134,22 @@
       }
     ],
     "start": "2023-04-01",
-    "end": "2023-08-19",
+    "end": "2024-06-19",
     "links": [
       {
         "type": "github",
+        "url": "https://github.com/ShanThatos/compile-pythonic-to-bf",
+        "text": "compile-pythonic-to-bf"
+      },
+      {
+        "type": "misc",
+        "url": "https://shanthatos.dev/_/blogs/c2bf-p1",
+        "text": "Blog Post"
+      },
+      {
+        "type": "github",
         "url": "https://github.com/ShanThatos/compile-to-bf",
-        "text": "compile-to-bf"
+        "text": "compile-to-bf (old)"
       }
     ],
     "tags": ["python"]
