@@ -6,34 +6,6 @@ If you're not familiar with BF, go watch [this video](https://www.youtube.com/wa
 
 ## A little taste of what's to come
 ```javascript
-"structs/list.bfun in the standard library"
-class list {
-    (__arr, __size)
-
-    variadic func $new(args) {
-        this.__size = args[-1]
-        this.__arr = calloc(this.__size)
-        if (this.__size)
-            memcpy(args, this.__arr, this.__size)
-    }
-
-    func $len() {
-        return this.__size
-    }
-
-    func $item(idx) {
-        return this.__arr + (idx % this.__size)
-    }
-
-    func $iter() {
-        return list_iterator(this)
-    }
-
-    ...
-}
-```
-
-```javascript
 import "io/input"
 println("Hello fibonacci!")
 stop = readint()
