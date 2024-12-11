@@ -84,15 +84,19 @@ println(primes)
 const C2BFDemoPage = () => {
   const [compiling, setCompiling] = useState<boolean>(false)
   const [code, _setCode] = useState<string>(localStorage.getItem("c2bf-code") ?? "")
-  const setCode = useCallback((newCode: string) => {
-    _setCode(newCode)
-    localStorage.setItem("c2bf-code", newCode)
-  }, [_setCode])
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const [error, setError] = useState<string>("")
   const [resultBf, setResultBf] = useState<string>("")
   const [resultC, setResultC] = useState<string>("")
+
+  const setCode = useCallback((newCode: string) => {
+    _setCode(newCode)
+    setResultBf("")
+    setResultC("")
+    setError("")
+    localStorage.setItem("c2bf-code", newCode)
+  }, [_setCode])
 
   useEffect(() => {
     fetch("https://c2bf-server.fly.dev/")
@@ -101,6 +105,8 @@ const C2BFDemoPage = () => {
   const compileToBrainfuck = useCallback(() => {
     setCompiling(true)
     setError("")
+    setResultBf("")
+    setResultC("")
     const currentCode = textareaRef.current?.value ?? ""
     fetch("https://c2bf-server.fly.dev/compile", {
       method: "POST",
@@ -119,9 +125,9 @@ const C2BFDemoPage = () => {
       }
     }).catch(err => {
       alert(`Something went wrong, please try again later. ${err}`)
+    }).finally(() => {
+      setCompiling(false)
     })
-
-    setCompiling(false)
   }, [])
 
   const downloadBfCode = useCallback(() => {
@@ -168,12 +174,7 @@ const C2BFDemoPage = () => {
           className="flex-1 rounded bg-[#222222] text-white font-[Consolas] p-2"
           spellCheck={false}
           value={code}
-          onChange={e => {
-            setCode(e.target.value)
-            setResultBf("")
-            setResultC("")
-            setError("")
-          }}
+          onChange={e => setCode(e.target.value)}
         >{code}</textarea>
       </div>
       <div className="mt-8 flex flex-row justify-center items-center">
