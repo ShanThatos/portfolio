@@ -120,17 +120,18 @@
   },
   {
     "id": "c2bf",
-    "name": "Compile Pythonic to BF (Old Version)",
-    "subtext": "An exploration of the Turing Completeness of brainf**k. I built a compiler that transforms a custom made high level language to BF. The language itself reads like a mix of C and Python. Internally, the language is first compiled down to a custom assembly language, and then compiled to BF.",
+    "name": "Compile Pythonic to Brainf**k",
+    "subtext": "An exploration of the Turing Completeness of brainf**k. I built a compiler that transforms my custom Pythonic high level language to Brainf**k. The language itself reads like a mix of C and Python. Internally, the language is first compiled down to a custom assembly language, and then compiled to BF.",
     "tech": ["python", "brainfuck"],
     "media": [
+      "video:huRupAyWhD4",
       {
         "src": "fib.png",
         "caption": "Fibonacci in my custom language"
       },
       {
         "src": "spec.png",
-        "caption": "Snippet of the language spec - used to programmatically parse the language"
+        "caption": "Snippet of the old language spec - used to programmatically parse the language"
       }
     ],
     "start": "2023-04-01",
