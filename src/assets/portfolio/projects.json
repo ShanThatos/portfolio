@@ -39,17 +39,17 @@
   {
     "id": "numblitz",
     "name": "NumBlitz - Mental Math Mobile App",
+    "subtext": "Growing up, I participated in a lot of math competitions. As a part of that, I learned way too many mental math tricks that have stuck with me to this day. NumBlitz is a mobile app that I built to be the end-all-be-all for mental math tricks. Users can explore over 100 math tricks, test their skills with infinitely generated quizzes tailored to each trick, and track their progress. The app is built with a Supabase backend+database, a Python (FastAPI) quiz generator server, and an Expo+Nativewind frontend. Still very much a WIP, but it's available on the AppStore!",
     "tech": [
       "python",
       "fastapi",
-      "sqlalchemy",
       "postgresql",
       "typescript",
       "reactnative",
       "tailwind",
       "katex"
     ],
-    "media": ["categories.jpg", "trickslist.jpg", "trick.jpg", "quiz.jpg"],
+    "media": ["dashboard.png", "trick.png", "quiz.png", "results.png"],
     "start": "2023-10-10",
     "end": "present",
     "links": [
