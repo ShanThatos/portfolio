@@ -118,7 +118,7 @@ function MainBanner() {
                 hover:underline hover:opacity-80
                 hover:shadow-md hover:shadow-[#ff6464] transition-shadow 
                 bg-[#00000088]"
-              href="https://youtube.com/@shanthkoka6506"
+              href="https://www.youtube.com/@shanthkoka"
               target="_blank"
               rel="noreferrer external"
             >
